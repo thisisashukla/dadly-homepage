@@ -809,6 +809,45 @@
       margin: 0;
     }
 
+    /* ─── ANIMATIONS ─── */
+
+    /* Hero: staggered entrance on load */
+    @keyframes heroUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes heroFade {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    .hero-eyebrow { animation: heroUp .5s cubic-bezier(.22,.68,0,1.2) both; animation-delay: 0ms; }
+    .hero h1      { animation: heroUp .6s cubic-bezier(.22,.68,0,1.1) both; animation-delay: 90ms; }
+    .hero-sub     { animation: heroUp .55s ease both; animation-delay: 180ms; }
+    .store-badges { animation: heroUp .5s ease both; animation-delay: 260ms; }
+    .hero-note    { animation: heroFade .5s ease both; animation-delay: 300ms; }
+    .hero-phones  { animation: heroUp .7s ease both; animation-delay: 380ms; }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .55s ease, transform .55s ease;
+      transition-delay: var(--d, 0ms);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Respect reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      .hero-eyebrow, .hero h1, .hero-sub, .store-badges, .hero-note, .hero-phones {
+        animation: none;
+      }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 960px) {
       .problem-grid  { grid-template-columns: repeat(2, 1fr); }
@@ -1309,5 +1348,38 @@
   </div>
 </footer>
 
+<script>
+  (function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+
+    function reveal(selector, stagger) {
+      document.querySelectorAll(selector).forEach(el => {
+        el.classList.add('reveal');
+        if (stagger) {
+          // delay relative to siblings so each group starts from 0
+          const idx = [...el.parentElement.children].indexOf(el);
+          el.style.setProperty('--d', (idx * 85) + 'ms');
+        }
+        observer.observe(el);
+      });
+    }
+
+    // Individual elements — no stagger
+    reveal('.eyebrow, .heading, .subtext, .quote-block, .pricing-card, .proof-item', false);
+
+    // Grouped items — stagger within their parent
+    reveal('.prob-card, .feat-card, .testi-card, .step', true);
+
+    // Split sections — text side and phone side independently
+    reveal('.split-text, .split-phone', false);
+  })();
+</script>
 </body>
 </html>
