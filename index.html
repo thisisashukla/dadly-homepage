@@ -17,7 +17,10 @@
   <meta property="og:site_name"   content="Dadly" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Non-blocking font load to eliminate render-blocking penalty -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
 
   <style>
     :root {
@@ -376,6 +379,7 @@
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       padding: 18px 0;
+      min-height: 68px; /* reserve space to prevent CLS */
     }
     .proof-inner {
       max-width: var(--max);
@@ -903,7 +907,7 @@
 
     <div class="store-badges" style="margin-bottom: 8px;">
       <a href="#pricing" class="store-badge">
-        <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" />
+        <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" width="120" height="40" />
       </a>
     </div>
     <p class="hero-note">$4.99/month · 7-day free trial · Cancel anytime</p>
@@ -918,7 +922,7 @@
         <div class="iphone-mock">
           <div class="iphone-island"></div>
           <div class="iphone-screen">
-            <img src="assets/dadly-brief.PNG" alt="Dadly weekly brief" />
+            <img src="assets/dadly-brief.webp" alt="Dadly weekly brief" width="1206" height="2622" loading="eager" decoding="async" />
           </div>
         </div>
       </div>
@@ -928,7 +932,7 @@
         <div class="iphone-mock">
           <div class="iphone-island"></div>
           <div class="iphone-screen">
-            <img src="assets/dadly-chat.PNG" alt="Dadly smart chat" />
+            <img src="assets/dadly-chat.webp" alt="Dadly smart chat" width="1206" height="2622" loading="eager" decoding="async" />
           </div>
         </div>
       </div>
@@ -938,7 +942,7 @@
         <div class="iphone-mock">
           <div class="iphone-island"></div>
           <div class="iphone-screen">
-            <img src="assets/dadly-analysis.PNG" alt="Dadly report analysis" />
+            <img src="assets/dadly-analysis.webp" alt="Dadly report analysis" width="1206" height="2622" loading="eager" decoding="async" />
           </div>
         </div>
       </div>
@@ -1117,7 +1121,7 @@
       </div>
       <div class="split-phone">
         <div class="split-phone-frame">
-          <img src="assets/dadly-chat.PNG" alt="Dadly Smart Chat interface" />
+          <img src="assets/dadly-chat.webp" alt="Dadly Smart Chat interface" width="1206" height="2622" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>
@@ -1156,7 +1160,7 @@
       </div>
       <div class="split-phone">
         <div class="split-phone-frame">
-          <img src="assets/dadly-brief.PNG" alt="Dadly weekly brief showing Week 9 guidance" />
+          <img src="assets/dadly-brief.webp" alt="Dadly weekly brief showing Week 9 guidance" width="1206" height="2622" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>
@@ -1195,7 +1199,7 @@
       </div>
       <div class="split-phone">
         <div class="split-phone-frame">
-          <img src="assets/dadly-analysis.PNG" alt="Dadly medical report analysis" />
+          <img src="assets/dadly-analysis.webp" alt="Dadly medical report analysis" width="1206" height="2622" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>
@@ -1234,7 +1238,7 @@
       </div>
       <div class="split-phone">
         <div class="split-phone-frame">
-          <img src="assets/dadly-customise.PNG" alt="Dadly situation customisation screen" />
+          <img src="assets/dadly-customise.webp" alt="Dadly situation customisation screen" width="1206" height="2622" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>
