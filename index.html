@@ -1248,9 +1248,7 @@
         autocapture: true,
         record_sessions_percent: 100,
       });
-      mixpanel.track("Page Viewed", {
-        "Page": "Home",
-      });
+      mixpanel.track("Dadly Homepage Viewed", {});
     </script>
   </head>
   <body>
@@ -1262,7 +1260,8 @@
           <li><a href="#features">Features</a></li>
           <li><a href="#how-it-works">How it works</a></li>
           <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#pricing" class="btn-nav">Get started</a></li>
+          <li><a href="blogs/">Blog</a></li>
+          <li><a href="#pricing" class="btn-nav" data-mp-location="nav">Get started</a></li>
         </ul>
       </div>
     </nav>
@@ -1284,7 +1283,7 @@
         </p>
 
         <div class="store-badges" style="margin-bottom: 8px">
-          <a href="#pricing" class="store-badge">
+          <a href="#pricing" class="store-badge" data-mp-location="hero_badge">
             <img
               src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
               alt="Download on the App Store"
@@ -1978,7 +1977,7 @@
               <li>Always there for late-night questions</li>
             </ul>
 
-            <a href="#" class="btn-gold">Start your free trial</a>
+            <a href="#" class="btn-gold" data-mp-location="pricing_card">Start your free trial</a>
             <p class="pricing-note">7-day free trial · Cancel anytime</p>
           </div>
         </div>
@@ -1999,6 +1998,7 @@
             href="#pricing"
             class="btn-dark"
             style="display: inline-flex; font-size: 16px; padding: 15px 32px"
+            data-mp-location="final_cta"
           >
             Try Dadly free
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -2025,7 +2025,8 @@
         <ul class="footer-links">
           <li><a href="#">Privacy</a></li>
           <li><a href="#">Terms</a></li>
-          <li><a href="#">Support</a></li>
+          <li><a href="blogs/">Blog</a></li>
+          <li><a href="support.html">Support</a></li>
         </ul>
       </div>
     </footer>
@@ -2067,6 +2068,46 @@
 
         // Split sections — text side and phone side independently
         reveal(".split-text, .split-phone", false);
+      })();
+    </script>
+
+    <script>
+      // Track CTA link clicks
+      (function () {
+        function trackLinks(pageName) {
+          document.querySelectorAll("a[data-mp-location]").forEach((link) => {
+            link.addEventListener("click", (event) => {
+              const href = link.href;
+              const openInNewTab =
+                link.target === "_blank" ||
+                event.metaKey ||
+                event.ctrlKey ||
+                event.shiftKey ||
+                event.button === 1;
+
+              const props = {
+                location: link.getAttribute("data-mp-location"),
+                page: pageName,
+                href: href,
+              };
+
+              if (!openInNewTab) event.preventDefault();
+
+              let didNavigate = false;
+              const navigate = () => {
+                if (!openInNewTab && !didNavigate) {
+                  didNavigate = true;
+                  window.location.href = href;
+                }
+              };
+
+              mixpanel.track("CTA Clicked", props, navigate);
+              setTimeout(navigate, 300);
+            });
+          });
+        }
+
+        trackLinks("Dadly Homepage");
       })();
     </script>
   </body>
