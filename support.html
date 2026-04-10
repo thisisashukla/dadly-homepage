@@ -390,7 +390,7 @@
           Write to us for any app issues, subscription questions, or general
           feedback. We typically respond within 1–2 business days.
         </p>
-        <a href="mailto:work.ankurshukla@gmail.com" class="contact-btn">
+        <a href="mailto:work.ankurshukla@gmail.com" class="contact-btn" data-mp-location="contact_email">
           Send an Email
         </a>
       </div>
@@ -453,6 +453,19 @@
         — we read every email.
       </p>
     </main>
+
+    <script>
+      // Track CTA clicks — mailto links don't navigate so no preventDefault needed
+      document.querySelectorAll("a[data-mp-location]").forEach((link) => {
+        link.addEventListener("click", () => {
+          mixpanel.track("CTA Clicked", {
+            location: link.getAttribute("data-mp-location"),
+            page: "Support",
+            href: link.href,
+          });
+        });
+      });
+    </script>
 
     <!-- ── FOOTER ── -->
     <footer>
