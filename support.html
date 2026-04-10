@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support — Dadly</title>
+    <meta
+      name="description"
+      content="Get support for the Dadly app. Contact us for any issues with the app at work.ankurshukla@gmail.com."
+    />
+    <link rel="canonical" href="https://dadly.app/support" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript
+      ><link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    /></noscript>
+
+    <script type="text/javascript">
+      (function (e, c) {
+        if (!c.__SV) {
+          var l, h;
+          window.mixpanel = c;
+          c._i = [];
+          c.init = function (q, r, f) {
+            function t(d, a) {
+              var g = a.split(".");
+              2 == g.length && ((d = d[g[0]]), (a = g[1]));
+              d[a] = function () {
+                d.push([a].concat(Array.prototype.slice.call(arguments, 0)));
+              };
+            }
+            var b = c;
+            "undefined" !== typeof f ? (b = c[f] = []) : (f = "mixpanel");
+            b.people = b.people || [];
+            b.toString = function (d) {
+              var a = "mixpanel";
+              "mixpanel" !== f && (a += "." + f);
+              d || (a += " (stub)");
+              return a;
+            };
+            b.people.toString = function () {
+              return b.toString(1) + ".people (stub)";
+            };
+            l =
+              "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders start_session_recording stop_session_recording people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(
+                " ",
+              );
+            for (h = 0; h < l.length; h++) t(b, l[h]);
+            var n = "set set_once union unset remove delete".split(" ");
+            b.get_group = function () {
+              function d(p) {
+                a[p] = function () {
+                  b.push([
+                    g,
+                    [p].concat(Array.prototype.slice.call(arguments, 0)),
+                  ]);
+                };
+              }
+              for (
+                var a = {},
+                  g = ["get_group"].concat(
+                    Array.prototype.slice.call(arguments, 0),
+                  ),
+                  m = 0;
+                m < n.length;
+                m++
+              )
+                d(n[m]);
+              return a;
+            };
+            c._i.push([q, r, f]);
+          };
+          c.__SV = 1.2;
+          var k = e.createElement("script");
+          k.type = "text/javascript";
+          k.async = !0;
+          k.src =
+            "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL
+              ? MIXPANEL_CUSTOM_LIB_URL
+              : "file:" === e.location.protocol &&
+                  "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)
+                ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
+                : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+          e = e.getElementsByTagName("script")[0];
+          e.parentNode.insertBefore(k, e);
+        }
+      })(document, window.mixpanel || []);
+
+      mixpanel.init("802bb71daed425d8fb73c567a4014b14", {
+        autocapture: true,
+        record_sessions_percent: 100,
+      });
+      mixpanel.track("Support Page Viewed", {});
+    </script>
+
+    <style>
+      :root {
+        --navy: #0d1527;
+        --navy-mid: #1e2d4a;
+        --gold: #c8881e;
+        --gold-light: #f5c96a;
+        --gold-bg: #fdf6e8;
+        --gold-border: #f0d79a;
+        --muted: #6b7280;
+        --muted-lt: #9ca3af;
+        --border: #e8eaed;
+        --bg: #ffffff;
+        --bg-warm: #fafaf8;
+        --bg-alt: #f6f4f1;
+        --max: 780px;
+        --r-lg: 20px;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      html { font-size: 16px; scroll-behavior: smooth; }
+
+      body {
+        background: var(--bg);
+        color: var(--navy);
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        font-weight: 400;
+        line-height: 1.7;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a { color: var(--gold); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      /* ── NAV ── */
+      nav {
+        background: rgba(255, 255, 255, 0.95);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        padding: 0 28px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .nav-logo {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 21px;
+        font-weight: 700;
+        color: var(--navy);
+        text-decoration: none;
+        letter-spacing: -0.3px;
+      }
+      .nav-logo em {
+        font-style: normal;
+        color: var(--gold);
+      }
+      .nav-back {
+        font-size: 13px;
+        color: var(--muted);
+        transition: color 0.18s;
+        text-decoration: none;
+      }
+      .nav-back:hover { color: var(--navy); text-decoration: none; }
+
+      /* ── MAIN ── */
+      main {
+        flex: 1;
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 64px 28px 80px;
+        width: 100%;
+      }
+
+      /* ── HERO ── */
+      .page-eyebrow {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 14px;
+      }
+      h1 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(32px, 5vw, 46px);
+        font-weight: 700;
+        color: var(--navy);
+        line-height: 1.2;
+        margin-bottom: 18px;
+      }
+      .page-subtitle {
+        font-size: 16px;
+        color: var(--muted);
+        max-width: 560px;
+        margin-bottom: 52px;
+      }
+
+      /* ── DIVIDER ── */
+      .divider {
+        height: 1px;
+        background: var(--border);
+        margin: 48px 0;
+      }
+
+      /* ── SECTION HEADINGS ── */
+      h2 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 14px;
+      }
+
+      p {
+        font-size: 15px;
+        color: var(--muted);
+        margin-bottom: 16px;
+      }
+      p:last-child { margin-bottom: 0; }
+
+      ul {
+        list-style: none;
+        margin-bottom: 16px;
+      }
+      ul li {
+        font-size: 15px;
+        color: var(--muted);
+        padding: 6px 0 6px 20px;
+        position: relative;
+      }
+      ul li::before {
+        content: "·";
+        position: absolute;
+        left: 0;
+        color: var(--gold);
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      /* ── CONTACT CARD ── */
+      .contact-card {
+        background: var(--gold-bg);
+        border: 1px solid var(--gold-border);
+        border-radius: var(--r-lg);
+        padding: 36px 32px;
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .contact-card .contact-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+      .contact-card .contact-email {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--navy);
+        word-break: break-all;
+      }
+      .contact-card .contact-note {
+        font-size: 14px;
+        color: var(--muted);
+        margin: 0;
+      }
+      .contact-btn {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 12px 28px;
+        background: var(--navy);
+        color: #fff;
+        font-weight: 700;
+        font-size: 14px;
+        border-radius: 50px;
+        letter-spacing: 0.03em;
+        transition: opacity 0.18s, transform 0.18s;
+        align-self: flex-start;
+        text-decoration: none;
+      }
+      .contact-btn:hover {
+        opacity: 0.85;
+        transform: translateY(-1px);
+        text-decoration: none;
+      }
+
+      /* ── POLICY SECTION ── */
+      .policy-section {
+        background: var(--bg-alt);
+        border: 1px solid var(--border);
+        border-radius: var(--r-lg);
+        padding: 32px;
+        margin-top: 12px;
+      }
+      .policy-section h2 {
+        margin-bottom: 18px;
+      }
+      .policy-section p,
+      .policy-section ul li {
+        font-size: 14.5px;
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: var(--navy);
+        padding: 44px 0;
+      }
+      .footer-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .footer-logo {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 19px;
+        font-weight: 700;
+        color: #fff;
+      }
+      .footer-logo em {
+        font-style: normal;
+        color: var(--gold);
+      }
+      .footer-copy {
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.35);
+      }
+      .footer-links {
+        display: flex;
+        gap: 22px;
+        list-style: none;
+      }
+      .footer-links a {
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.35);
+        transition: color 0.18s;
+        text-decoration: none;
+      }
+      .footer-links a:hover { color: rgba(255, 255, 255, 0.75); }
+
+      @media (max-width: 600px) {
+        main { padding: 44px 20px 64px; }
+        .contact-card { padding: 26px 22px; }
+        .policy-section { padding: 24px 20px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ── NAV ── -->
+    <nav>
+      <a href="index.html" class="nav-logo">Dad<em>ly</em></a>
+      <a href="index.html" class="nav-back">← Back to Home</a>
+    </nav>
+
+    <!-- ── MAIN ── -->
+    <main>
+      <p class="page-eyebrow">Help &amp; Support</p>
+      <h1>We're here to help</h1>
+      <p class="page-subtitle">
+        Have a question about the Dadly app, a problem with your account, or
+        anything else? Reach out and we'll get back to you as soon as possible.
+      </p>
+
+      <!-- Contact card -->
+      <h2>Contact Us</h2>
+      <div class="contact-card">
+        <span class="contact-label">Email support</span>
+        <span class="contact-email">work.ankurshukla@gmail.com</span>
+        <p class="contact-note">
+          Write to us for any app issues, subscription questions, or general
+          feedback. We typically respond within 1–2 business days.
+        </p>
+        <a href="mailto:work.ankurshukla@gmail.com" class="contact-btn">
+          Send an Email
+        </a>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Support policy -->
+      <div class="policy-section">
+        <h2>Support Policy</h2>
+        <p>
+          Dadly is built to help expecting and new dads navigate pregnancy and
+          newborn life with more confidence. The following outlines how we handle
+          support requests.
+        </p>
+
+        <p><strong style="color: var(--navy);">What we can help with</strong></p>
+        <ul>
+          <li>Technical issues — crashes, login problems, or features not working</li>
+          <li>Subscription and billing questions — charges, upgrades, and cancellations</li>
+          <li>Content concerns — inaccurate information or suggestions that feel off</li>
+          <li>Account and data requests — deleting your account or your data</li>
+          <li>General feedback and feature suggestions</li>
+        </ul>
+
+        <p><strong style="color: var(--navy);">Response time</strong></p>
+        <p>
+          We aim to respond to all support emails within 1–2 business days.
+        </p>
+
+        <p><strong style="color: var(--navy);">Subscriptions &amp; refunds</strong></p>
+        <p>
+          Dadly offers a 7-day free trial followed by a $4.99/month subscription
+          managed through the App Store. Subscription billing, cancellation, and
+          refund requests are handled by Apple. You can manage or cancel your
+          subscription at any time from your iPhone's Settings → Apple ID →
+          Subscriptions. If you have trouble with this process, email us and
+          we'll guide you through it.
+        </p>
+
+        <p><strong style="color: var(--navy);">Medical disclaimer</strong></p>
+        <p>
+          Dadly provides general information to help dads understand pregnancy
+          and newborn development. It is not a substitute for professional
+          medical advice. Always consult a qualified healthcare provider for
+          medical concerns.
+        </p>
+
+        <p><strong style="color: var(--navy);">Privacy</strong></p>
+        <p>
+          We do not sell your data. For any privacy-related questions, email us at
+          <a href="mailto:work.ankurshukla@gmail.com">work.ankurshukla@gmail.com</a>.
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <p style="font-size: 14px; color: var(--muted-lt); text-align: center;">
+        You can also reach us at
+        <a href="mailto:work.ankurshukla@gmail.com">work.ankurshukla@gmail.com</a>
+        — we read every email.
+      </p>
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">Dad<em>ly</em></div>
+        <p class="footer-copy">© 2026 Dadly · Not a substitute for medical advice.</p>
+        <ul class="footer-links">
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="blogs/">Blog</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
