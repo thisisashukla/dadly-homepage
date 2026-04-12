@@ -197,6 +197,76 @@
       }
       .btn-nav:hover { opacity: 0.85; }
 
+      /* HAMBURGER */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+      }
+      .hamburger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--navy);
+        border-radius: 2px;
+        transition: transform 0.25s, opacity 0.25s;
+      }
+      .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .hamburger.open span:nth-child(2) { opacity: 0; }
+      .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        z-index: 199;
+        padding: 16px 28px 24px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      }
+      .mobile-menu.open { display: block; }
+      .mobile-menu ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .mobile-menu ul li a {
+        display: block;
+        padding: 13px 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--muted);
+        border-bottom: 1px solid var(--border);
+        transition: color 0.15s;
+      }
+      .mobile-menu ul li:last-child a { border-bottom: none; }
+      .mobile-menu ul li a:hover { color: var(--navy); }
+      .mobile-menu .btn-nav-mobile {
+        display: block;
+        margin-top: 16px;
+        background: var(--navy);
+        color: #fff !important;
+        text-align: center;
+        padding: 13px 18px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        transition: opacity 0.18s;
+      }
+      .mobile-menu .btn-nav-mobile:hover { opacity: 0.85; }
+
       /* HERO */
       .blog-hero {
         background: var(--bg-warm);
@@ -522,6 +592,7 @@
         .blog-wrap { padding: 40px 20px 60px; }
         .nav-inner { padding: 0 20px; }
         .nav-links { display: none; }
+        .hamburger { display: flex; }
       }
     </style>
   </head>
@@ -543,8 +614,20 @@
             >
           </li>
         </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="../index.html#features" data-mp-location="nav_features">Features</a></li>
+        <li><a href="../index.html#how-it-works" data-mp-location="nav_how_it_works">How it works</a></li>
+        <li><a href="../index.html#pricing" data-mp-location="nav_pricing">Pricing</a></li>
+        <li><a href="./index.html" data-mp-location="nav_blog">Blog</a></li>
+      </ul>
+      <a href="../index.html#pricing" class="btn-nav-mobile" data-mp-location="nav_cta">Get started</a>
+    </div>
 
     <div class="blog-hero">
       <div class="blog-hero-inner">
@@ -674,6 +757,25 @@
           page: 'Blog Index',
         };
       });
+
+      // Hamburger menu toggle
+      (function () {
+        var btn = document.getElementById("hamburger");
+        var menu = document.getElementById("mobile-menu");
+        function close() {
+          btn.classList.remove("open");
+          menu.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+        }
+        btn.addEventListener("click", function () {
+          var open = menu.classList.toggle("open");
+          btn.classList.toggle("open");
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        menu.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", close);
+        });
+      })();
     </script>
   </body>
 </html>
