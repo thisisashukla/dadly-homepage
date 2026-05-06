@@ -1,7 +1,7 @@
 'use client'
 
-import mixpanel from 'mixpanel-browser'
 import Link from 'next/link'
+import { trackCTAClick } from '@/lib/mixpanel'
 
 interface Props {
   href: string
@@ -19,11 +19,8 @@ export function TrackingLink({
   'data-mp-article': dataMpArticle,
 }: Props) {
   const handleClick = () => {
-    try {
-      mixpanel.track('CTA Clicked', { location, page, href })
-    } catch {
-      // silently fail if Mixpanel not yet ready
-    }
+    // sendBeacon transport inside trackCTAClick survives same-tab navigation
+    trackCTAClick(page, location, href)
     onClick?.()
   }
 

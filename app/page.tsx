@@ -378,7 +378,7 @@ export default function HomePage() {
                 <li>Context-aware answers across mom and baby</li>
                 <li>Always there for late-night questions</li>
               </ul>
-              <TrackingLink href="#" location="pricing_card" page="Dadly Homepage" className="btn-gold">
+              <TrackingLink href="#pricing" location="pricing_card" page="Dadly Homepage" className="btn-gold">
                 Start your free trial
               </TrackingLink>
               <p className="pricing-note">7-day free trial · Cancel anytime</p>

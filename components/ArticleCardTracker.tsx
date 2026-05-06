@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import mixpanel from 'mixpanel-browser'
+import { trackEvent } from '@/lib/mixpanel'
 
 /**
  * Attaches click-tracking to every <a data-mp-article="…"> on the blog index.
@@ -14,14 +14,10 @@ export function ArticleCardTracker() {
 
     links.forEach((el) => {
       const fn = () => {
-        try {
-          mixpanel.track('Article Card Clicked', {
-            article: el.getAttribute('data-mp-article'),
-            page: 'Blog Index',
-          })
-        } catch {
-          // silently fail
-        }
+        trackEvent('Article Card Clicked', {
+          article: el.getAttribute('data-mp-article'),
+          page: 'Blog Index',
+        })
       }
       el.addEventListener('click', fn)
       handlers.push({ el, fn })

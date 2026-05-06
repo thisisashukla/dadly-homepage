@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import mixpanel from 'mixpanel-browser'
+import { trackEvent } from '@/lib/mixpanel'
 
 interface Props {
   event: string
@@ -10,11 +10,7 @@ interface Props {
 
 export function PageViewTracker({ event, properties }: Props) {
   useEffect(() => {
-    try {
-      mixpanel.track(event, properties ?? {})
-    } catch {
-      // silently fail if Mixpanel not yet initialised
-    }
+    trackEvent(event, properties ?? {})
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

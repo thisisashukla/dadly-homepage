@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import mixpanel from 'mixpanel-browser'
+import { trackEvent } from '@/lib/mixpanel'
 
 interface Props {
   slug: string
@@ -27,14 +27,7 @@ export function ScrollTracker({ slug }: Props) {
       thresholds.forEach((threshold) => {
         if (scrollPercent >= threshold && !tracked.has(threshold)) {
           tracked.add(threshold)
-          try {
-            mixpanel.track('Blog Scroll Depth', {
-              article: slug,
-              percent: threshold,
-            })
-          } catch {
-            // silently fail if Mixpanel not yet ready
-          }
+          trackEvent('Blog Scroll Depth', { article: slug, percent: threshold })
         }
       })
     }
