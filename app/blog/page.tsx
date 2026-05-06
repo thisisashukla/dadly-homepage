@@ -69,7 +69,7 @@ export default function BlogIndex() {
               actually helps.
             </p>
           </div>
-          <TrackingLink href="/#pricing" location="blog_app_banner" page="Blog Index" className="app-banner-btn">
+          <TrackingLink href="/waitlist" location="blog_app_banner" page="Blog Index" className="app-banner-btn">
             Try Dadly Free →
           </TrackingLink>
         </div>

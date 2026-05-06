@@ -41,7 +41,7 @@ export function Nav() {
               </TrackingLink>
             </li>
             <li>
-              <TrackingLink href="/#pricing" location="nav_cta" page={page} className="btn-nav">
+              <TrackingLink href="/#footer" location="nav_cta" page={page} className="btn-nav">
                 Get started
               </TrackingLink>
             </li>
@@ -82,7 +82,7 @@ export function Nav() {
             </TrackingLink>
           </li>
         </ul>
-        <TrackingLink href="/#pricing" location="nav_cta" page={page} className="btn-nav-mobile" onClick={close}>
+        <TrackingLink href="/#footer" location="nav_cta" page={page} className="btn-nav-mobile" onClick={close}>
           Get started
         </TrackingLink>
       </div>

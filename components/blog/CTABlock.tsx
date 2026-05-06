@@ -14,7 +14,7 @@ export function CTABlock({
   titleHtml,
   description,
   buttonText = 'Get Dadly',
-  buttonHref = '/#pricing',
+  buttonHref = '/waitlist',
   page = 'blog',
 }: Props) {
   return (

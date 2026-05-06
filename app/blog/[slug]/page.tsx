@@ -108,7 +108,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
         titleHtml="Dadly — Clear answers for <em>dads.</em>"
         description="Weekly briefs, scan and report explainers, and an AI you can ask anything — written for the dad, not the couple. Free for 7 days."
         buttonText="Try Dadly free →"
-        buttonHref="/#pricing"
+        buttonHref="/waitlist"
         page={`article_${slug}`}
       />
 

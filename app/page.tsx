@@ -54,17 +54,11 @@ export default function HomePage() {
           </p>
 
           <div className="store-badges" style={{ marginBottom: '8px' }}>
-            <TrackingLink href="#pricing" location="hero_badge" page="Dadly Homepage" className="store-badge">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
-                alt="Download on the App Store"
-                width={120}
-                height={40}
-              />
+            <TrackingLink href="/waitlist" location="hero_cta" page="Dadly Homepage" className="btn-dark" style={{ display: 'inline-flex', fontSize: '16px', padding: '15px 32px' }}>
+              Get Dadly — $4.99/mo <ArrowIcon />
             </TrackingLink>
           </div>
-          <p className="hero-note">$4.99/month · 7-day free trial · Cancel anytime</p>
+          <p className="hero-note">7-day free trial · Cancel anytime · iOS &amp; Android</p>
         </div>
 
         {/* phone fan */}
@@ -378,7 +372,7 @@ export default function HomePage() {
                 <li>Context-aware answers across mom and baby</li>
                 <li>Always there for late-night questions</li>
               </ul>
-              <TrackingLink href="#pricing" location="pricing_card" page="Dadly Homepage" className="btn-gold">
+              <TrackingLink href="/waitlist" location="pricing_card" page="Dadly Homepage" className="btn-gold">
                 Start your free trial
               </TrackingLink>
               <p className="pricing-note">7-day free trial · Cancel anytime</p>
@@ -394,7 +388,7 @@ export default function HomePage() {
           <h2>Be the dad who stays calm<br />when things feel uncertain.</h2>
           <p>From pregnancy symptoms to newborn worries, Dadly helps you understand what&apos;s happening and what to do next.</p>
           <div className="store-badges">
-            <TrackingLink href="#pricing" location="final_cta" page="Dadly Homepage" className="btn-dark" style={{ display: 'inline-flex', fontSize: '16px', padding: '15px 32px' }}>
+            <TrackingLink href="/waitlist" location="final_cta" page="Dadly Homepage" className="btn-dark" style={{ display: 'inline-flex', fontSize: '16px', padding: '15px 32px' }}>
               Try Dadly free <ArrowIcon />
             </TrackingLink>
           </div>
@@ -430,6 +424,17 @@ function ScrollReveal() {
   reveal('.eyebrow,.heading,.subtext,.quote-block,.pricing-card,.proof-item',false);
   reveal('.prob-card,.feat-card,.testi-card,.step',true);
   reveal('.split-text,.split-phone',false);
+  // When the page loads scrolled to a hash (e.g. /#footer), elements above the
+  // current viewport will never intersect. Mark them visible immediately so they
+  // don't stay invisible with opacity:0.
+  function showAboveViewport(){
+    document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){
+      if(el.getBoundingClientRect().bottom<window.innerHeight){el.classList.add('visible');}
+    });
+  }
+  showAboveViewport();
+  // Also run after a frame in case the browser finishes scrolling after script runs.
+  requestAnimationFrame(showAboveViewport);
 })();
         `,
       }}
