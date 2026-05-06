@@ -2,12 +2,19 @@
 
 import { useState, useCallback } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { TrackingLink } from './TrackingLink'
 import { usePageName } from '@/lib/usePageName'
 
 export function Nav() {
   const [isOpen, setIsOpen] = useState(false)
   const page = usePageName()
+  const pathname = usePathname()
+
+  // On the home page, scroll to the footer (which has the platform buttons).
+  // On any other page, go to /waitlist directly — avoids loading home page
+  // scrolled to the bottom, which breaks the scroll-reveal animations.
+  const ctaHref = pathname === '/' ? '#footer' : '/waitlist'
 
   const toggle = useCallback(() => setIsOpen((o) => !o), [])
   const close = useCallback(() => setIsOpen(false), [])
@@ -41,7 +48,7 @@ export function Nav() {
               </TrackingLink>
             </li>
             <li>
-              <TrackingLink href="/#footer" location="nav_cta" page={page} className="btn-nav">
+              <TrackingLink href={ctaHref} location="nav_cta" page={page} className="btn-nav">
                 Get started
               </TrackingLink>
             </li>
@@ -82,7 +89,7 @@ export function Nav() {
             </TrackingLink>
           </li>
         </ul>
-        <TrackingLink href="/#footer" location="nav_cta" page={page} className="btn-nav-mobile" onClick={close}>
+        <TrackingLink href={ctaHref} location="nav_cta" page={page} className="btn-nav-mobile" onClick={close}>
           Get started
         </TrackingLink>
       </div>

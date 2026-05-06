@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { PageViewTracker } from '@/components/PageViewTracker'
 import { TrackingLink } from '@/components/TrackingLink'
+import { ScrollReveal } from '@/components/ScrollReveal'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
@@ -395,49 +396,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── SCROLL REVEAL SCRIPT ─── */}
+      {/* ─── SCROLL REVEAL ─── */}
       <ScrollReveal />
     </>
-  )
-}
-
-// Client component just for the scroll-reveal observer
-function ScrollReveal() {
-  // Inline as a client component to keep page server-rendered
-  return (
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
-(function(){
-  var observer=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}
-    });
-  },{threshold:0.1,rootMargin:'0px 0px -32px 0px'});
-  function reveal(sel,stagger){
-    document.querySelectorAll(sel).forEach(function(el){
-      el.classList.add('reveal');
-      if(stagger){var idx=[].indexOf.call(el.parentElement.children,el);el.style.setProperty('--d',idx*85+'ms');}
-      observer.observe(el);
-    });
-  }
-  reveal('.eyebrow,.heading,.subtext,.quote-block,.pricing-card,.proof-item',false);
-  reveal('.prob-card,.feat-card,.testi-card,.step',true);
-  reveal('.split-text,.split-phone',false);
-  // When the page loads scrolled to a hash (e.g. /#footer), elements above the
-  // current viewport will never intersect. Mark them visible immediately so they
-  // don't stay invisible with opacity:0.
-  function showAboveViewport(){
-    document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){
-      if(el.getBoundingClientRect().bottom<window.innerHeight){el.classList.add('visible');}
-    });
-  }
-  showAboveViewport();
-  // Also run after a frame in case the browser finishes scrolling after script runs.
-  requestAnimationFrame(showAboveViewport);
-})();
-        `,
-      }}
-    />
   )
 }
