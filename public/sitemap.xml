@@ -1,58 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.dadlyapp.com/</loc>
+    <loc>https://dadlyapp.com/</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.dadlyapp.com/blog</loc>
+    <loc>https://dadlyapp.com/blog</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.dadlyapp.com/blog/i-asked-ai-every-question-pregnancy</loc>
+    <loc>https://dadlyapp.com/blog/i-asked-ai-every-question-pregnancy</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.dadlyapp.com/blog/do-dads-get-postpartum-depression</loc>
+    <loc>https://dadlyapp.com/blog/do-dads-get-postpartum-depression</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.dadlyapp.com/blog/how-to-bond-with-newborn-as-a-dad</loc>
+    <loc>https://dadlyapp.com/blog/how-to-bond-with-newborn-as-a-dad</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.dadlyapp.com/blog/new-dad-sleep-deprivation-survival-guide</loc>
+    <loc>https://dadlyapp.com/blog/new-dad-sleep-deprivation-survival-guide</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.dadlyapp.com/blog/what-to-expect-in-delivery-room-first-time-dad</loc>
+    <loc>https://dadlyapp.com/blog/what-to-expect-in-delivery-room-first-time-dad</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.dadlyapp.com/blog/real-cost-of-having-a-baby-first-time-dads</loc>
+    <loc>https://dadlyapp.com/blog/real-cost-of-having-a-baby-first-time-dads</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.dadlyapp.com/privacy</loc>
+    <loc>https://dadlyapp.com/privacy</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.dadlyapp.com/support</loc>
+    <loc>https://dadlyapp.com/support</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

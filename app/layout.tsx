@@ -5,8 +5,12 @@ import Footer from '@/components/Footer'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://dadlyapp.com'),
   title: 'Dadly — Clear answers for new and expecting dads',
   description: 'From pregnancy symptoms and scans to newborn feeding, sleep, and health concerns — Dadly helps dads know what matters and what to do next.',
+  alternates: {
+    canonical: 'https://dadlyapp.com',
+  },
   openGraph: {
     type: 'website',
     url: 'https://dadlyapp.com',

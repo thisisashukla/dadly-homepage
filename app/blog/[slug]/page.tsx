@@ -32,6 +32,9 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     title: `${blog.title} | Dadly`,
     description: blog.description,
     keywords: blog.keywords,
+    alternates: {
+      canonical: `https://dadlyapp.com/blog/${blog.slug}`,
+    },
     openGraph: {
       type: 'article',
       title: blog.title,
@@ -64,8 +67,59 @@ export default async function BlogPage({ params }: BlogPageProps) {
   const relatedSlugs = getAllBlogSlugs().filter((s: string) => s !== slug).slice(0, 4)
   const relatedBlogs = relatedSlugs.map((s: string) => getBlogBySlug(s)).filter(Boolean)
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: blog.title,
+    description: blog.description,
+    author: {
+      '@type': 'Person',
+      name: blog.author,
+      jobTitle: blog.authorRole,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Dadly',
+      url: 'https://dadlyapp.com',
+    },
+    datePublished: blog.datePublished,
+    dateModified: blog.dateModified,
+    url: `https://dadlyapp.com/blog/${blog.slug}`,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://dadlyapp.com/blog/${blog.slug}`,
+    },
+    keywords: blog.keywords.join(', '),
+    wordCount: blog.wordCount,
+  }
+
+  const faqJsonLd = blog.faqs && blog.faqs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: blog.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      }
+    : null
+
   return (
     <main className="article-outer">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <ArticleViewTracker slug={slug} title={blog.title} category={blog.category} />
       <ScrollTracker slug={slug} />
 
