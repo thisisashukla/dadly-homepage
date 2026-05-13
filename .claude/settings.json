@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk -v end=2900 '$0 ~ /^[0-9]+:/{split\\($0,a,\":\"\\); if\\(int\\(a[1]\\)<end\\) line=$0; else {print line; exit}}')",
+      "Bash(awk -F: '$1 < 2627 {print}')"
+    ]
+  }
+}

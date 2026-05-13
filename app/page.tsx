@@ -3,20 +3,90 @@ import { PageViewTracker } from '@/components/PageViewTracker'
 import { TrackingLink } from '@/components/TrackingLink'
 import { ScrollReveal } from '@/components/ScrollReveal'
 import Image from 'next/image'
+import { getAllBlogSlugs, getBlogBySlug } from '@/lib/blogs'
+
+const homepageFaqs = [
+  {
+    q: 'Is there an app specifically for expecting dads?',
+    a: 'Yes — Dadly is built specifically for dads. Unlike most pregnancy apps designed for the person who\'s pregnant, Dadly helps the partner: understanding symptoms, reading scan reports, preparing for doctor visits, and getting calm answers at 3am when something feels off.',
+  },
+  {
+    q: 'What\'s the best pregnancy app for dads?',
+    a: 'Dadly is the only pregnancy and newborn app with context-aware AI chat, medical report analysis, and full coverage from pregnancy through the newborn stage — all built for dads. It gives you clear, calm answers to the questions you\'d normally have to Google at 2am.',
+  },
+  {
+    q: 'Can dads use regular pregnancy apps?',
+    a: 'Most pregnancy apps are built for the person who\'s pregnant. Dadly is built for the partner\'s role: what you need to know, what questions to ask, and how to stay calm and useful across pregnancy and the newborn stage.',
+  },
+  {
+    q: 'Is there an AI app for new dads?',
+    a: 'Dadly is an AI-powered app for both expecting and new dads. Ask about your partner\'s pregnancy symptoms, upload a scan or test result for a plain-English explanation, or ask about your newborn\'s behaviour. It responds to your specific situation — not generic advice.',
+  },
+  {
+    q: 'What can I ask Dadly at 3am?',
+    a: 'Anything: Is this symptom normal at 30 weeks? What does this ultrasound result mean? The baby won\'t stop crying — what should I check? The baby\'s poop colour changed — is that okay? Why is my newborn grunting? Dadly is built for these exact moments, when it\'s too late to call anyone and Google is making things worse.',
+  },
+  {
+    q: 'How much does Dadly cost?',
+    a: 'Dadly is $4.99 per month, with a 7-day free trial. Cancel anytime. Available on iOS and Android.',
+  },
+]
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Dadly',
+  url: 'https://dadlyapp.com',
+  logo: 'https://dadlyapp.com/og-image.png',
+  description: 'AI-powered companion app for expecting and new dads — pregnancy symptoms, scan analysis, newborn guidance.',
+}
+
+const softwareAppJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Dadly',
+  applicationCategory: 'HealthApplication',
+  operatingSystem: 'iOS, Android',
+  description: 'AI companion for expecting and new dads. Ask about pregnancy symptoms, upload scan reports, get newborn guidance — available at 3am.',
+  offers: {
+    '@type': 'Offer',
+    price: '4.99',
+    priceCurrency: 'USD',
+    priceValidUntil: '2027-01-01',
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Ankur',
+    jobTitle: 'Founder, Dadly',
+  },
+}
+
+const homepageFaqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homepageFaqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.a,
+    },
+  })),
+}
 
 export const metadata: Metadata = {
-  title: 'Dadly — Clear answers for new and expecting dads',
+  title: 'Dadly: AI App for Expecting & New Dads | Pregnancy & Newborn Guide',
   description:
-    'From pregnancy symptoms and scans to newborn feeding, sleep, and health concerns — Dadly helps dads know what matters and what to do next.',
+    'Dadly is the AI companion for expecting and new dads. Ask about pregnancy symptoms, upload scan reports for plain-English explanations, and get calm answers at 3am. iOS & Android.',
   alternates: {
     canonical: 'https://dadlyapp.com',
   },
   openGraph: {
     type: 'website',
     url: 'https://dadlyapp.com',
-    title: 'Dadly — Clear answers for dads, through pregnancy and newborn life',
+    title: 'Dadly: AI App for Expecting & New Dads | Pregnancy & Newborn Guide',
     description:
-      'From pregnancy symptoms and scans to newborn feeding, sleep, and health concerns — Dadly helps dads know what matters and what to do next.',
+      'Dadly is the AI companion for expecting and new dads. Ask about pregnancy symptoms, upload scan reports for plain-English explanations, and get calm answers at 3am.',
     images: [{ url: 'https://dadlyapp.com/og-image.png', width: 1200, height: 630 }],
     siteName: 'Dadly',
   },
@@ -37,8 +107,28 @@ const ArrowIcon = () => (
 )
 
 export default function HomePage() {
+  const featuredSlugs = [
+    'i-asked-ai-every-question-pregnancy',
+    'do-dads-get-postpartum-depression',
+    'what-to-expect-in-delivery-room-first-time-dad',
+    'new-dad-sleep-deprivation-survival-guide',
+  ]
+  const featuredBlogs = featuredSlugs.map((s) => getBlogBySlug(s)).filter(Boolean)
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageFaqJsonLd) }}
+      />
       <PageViewTracker event="Dadly Homepage Viewed" />
 
       {/* ─── HERO ─── */}
@@ -346,6 +436,58 @@ export default function HomePage() {
                     <div className="testi-role">{t.role}</div>
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── FROM THE BLOG ─── */}
+      <section className="section">
+        <div className="wrap t-center">
+          <div className="eyebrow">From the Dadly blog</div>
+          <h2 className="heading" style={{ maxWidth: '520px', margin: '0 auto 14px' }}>
+            Guides written for dads,<br />not the couple.
+          </h2>
+          <p className="subtext" style={{ maxWidth: '460px', margin: '0 auto 32px' }}>
+            Practical articles on pregnancy symptoms, newborn life, mental health, and the delivery room — written from the dad&apos;s perspective.
+          </p>
+          <div className="feat-grid" style={{ textAlign: 'left' }}>
+            {featuredBlogs.map((blog) => (
+              <TrackingLink
+                key={blog!.slug}
+                href={`/blog/${blog!.slug}`}
+                location={`homepage_blog_${blog!.slug}`}
+                page="Dadly Homepage"
+                className="feat-card reveal"
+                style={{ textDecoration: 'none', display: 'block' }}
+              >
+                <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '8px' }}>{blog!.category}</div>
+                <h3 style={{ fontSize: '15px', lineHeight: 1.4, marginBottom: '8px' }}>{blog!.title}</h3>
+                <p style={{ fontSize: '13px', color: 'var(--muted)', margin: 0 }}>{blog!.readTime} read →</p>
+              </TrackingLink>
+            ))}
+          </div>
+          <div style={{ marginTop: '28px' }}>
+            <TrackingLink href="/blog" location="homepage_blog_all" page="Dadly Homepage" className="btn-dark" style={{ display: 'inline-flex', fontSize: '15px', padding: '13px 28px' }}>
+              Read all guides →
+            </TrackingLink>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── FAQ ─── */}
+      <section className="section section-alt" id="faq">
+        <div className="wrap">
+          <div className="eyebrow" style={{ textAlign: 'center' }}>Common questions</div>
+          <h2 className="heading" style={{ maxWidth: '540px', margin: '0 auto 36px', textAlign: 'center' }}>
+            Questions dads ask about Dadly
+          </h2>
+          <div style={{ maxWidth: '680px', margin: '0 auto' }}>
+            {homepageFaqs.map((faq, i) => (
+              <div key={i} style={{ borderBottom: '1px solid var(--rule)', padding: '20px 0' }}>
+                <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '10px', lineHeight: 1.4 }}>{faq.q}</h3>
+                <p style={{ fontSize: '15px', color: 'var(--muted)', margin: 0, lineHeight: 1.7 }}>{faq.a}</p>
               </div>
             ))}
           </div>

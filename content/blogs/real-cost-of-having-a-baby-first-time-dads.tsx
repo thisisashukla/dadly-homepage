@@ -28,6 +28,16 @@ export const meta: BlogMeta = {
 export function BlogContent() {
   return (
     <article className="article-body">
+      <InsightBox label="Key Takeaways">
+        <ul style={{ margin: 0, paddingLeft: '20px', lineHeight: 1.8 }}>
+          <li>Hospital birth costs $2,000–$5,000 out-of-pocket with insurance; $10,000–$15,000 without</li>
+          <li>Childcare ($1,500–$3,500/month) is typically the largest first-year expense — more than college tuition</li>
+          <li>You only truly need ~$2,000–$3,000 in baby gear; resist the registry pressure</li>
+          <li>WIC, Dependent Care FSA, and Child Tax Credit can meaningfully reduce costs if you qualify</li>
+          <li>Talk numbers with your partner before the baby arrives — information beats panic</li>
+        </ul>
+      </InsightBox>
+
       <p>
         Someone is going to tell you that having a baby is "worth any cost." And they're not wrong, 
         emotionally. But emotionally and financially are different conversations, and financially, 
@@ -241,9 +251,11 @@ export function BlogContent() {
       </p>
 
       <p>
-        <strong>Your partner's postpartum care:</strong> Physical therapy if she had tearing. 
-        Mental health support if she has postpartum depression. Pelvic floor therapy. 
+        <strong>Your partner's postpartum care:</strong> Physical therapy if she had tearing.
+        Mental health support if she has postpartum depression. Pelvic floor therapy.
         These things are medically necessary and not always covered well by insurance. Budget for it.
+        And don't overlook your own mental health costs — <a href="/blog/do-dads-get-postpartum-depression">paternal postpartum depression</a>{' '}
+        affects 1 in 10 new dads and often requires its own treatment.
       </p>
 
       <InsightBox label="Build a contingency fund">
@@ -280,6 +292,13 @@ export function BlogContent() {
         <strong>WIC (Women, Infants, and Children):</strong> Income-based program that covers formula, 
         some food, and some milk. Even if you don't think you qualify, apply. Many people qualify 
         without realizing it.
+      </p>
+
+      <p>
+        If you haven't already thought through what birth itself will look like on the day,
+        our guide on <a href="/blog/what-to-expect-in-delivery-room-first-time-dad">what to expect in the delivery room</a>{' '}
+        covers the practical side — including what to bring, what insurance to sort in advance, and
+        what your role actually is during labor.
       </p>
 
       <h2>The year-one budget at a glance</h2>

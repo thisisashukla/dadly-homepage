@@ -44,6 +44,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       publishedTime: blog.datePublished,
       modifiedTime: blog.dateModified,
       authors: [blog.author],
+      images: [{ url: 'https://dadlyapp.com/og-image.png', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -156,6 +157,40 @@ export default async function BlogPage({ params }: BlogPageProps) {
       </div>
 
       <BlogContent />
+
+      {/* ─── AUTHOR BIO / E-E-A-T ─── */}
+      <div style={{
+        borderTop: '1px solid var(--rule)',
+        borderBottom: '1px solid var(--rule)',
+        padding: '24px 0',
+        margin: '40px 0',
+        display: 'flex',
+        gap: '20px',
+        alignItems: 'flex-start',
+      }}>
+        <div style={{
+          width: '48px',
+          height: '48px',
+          borderRadius: '50%',
+          background: 'var(--navy, #1a2744)',
+          color: '#fff',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: '18px',
+          fontWeight: 700,
+          flexShrink: 0,
+        }}>A</div>
+        <div>
+          <div style={{ fontSize: '14px', fontWeight: 700, marginBottom: '4px' }}>Ankur — Founder, Dadly</div>
+          <p style={{ fontSize: '13px', color: 'var(--muted)', margin: '0 0 10px', lineHeight: 1.6 }}>
+            Data scientist and dad who navigated a high-risk pregnancy. Built Dadly because no app existed for what dads actually need at 2am. Every article on this blog comes from real lived experience.
+          </p>
+          <div style={{ fontSize: '12px', color: 'var(--muted)', background: 'var(--bg-warm, #f7f4ef)', borderRadius: '6px', padding: '8px 12px', lineHeight: 1.5 }}>
+            <strong>Health content note:</strong> Articles on Dadly are for informational purposes and are not a substitute for professional medical advice. Always consult your doctor, midwife, or healthcare provider for guidance specific to your situation.
+          </div>
+        </div>
+      </div>
 
       <CTABlock
         title="Dadly — Clear answers for dads."

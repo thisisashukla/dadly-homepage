@@ -28,6 +28,16 @@ export const meta: BlogMeta = {
 export function BlogContent() {
   return (
     <article className="article-body">
+      <InsightBox label="Key Takeaways">
+        <ul style={{ margin: 0, paddingLeft: '20px', lineHeight: 1.8 }}>
+          <li>Labor averages 12–18 hours for first-time parents — much longer than TV suggests</li>
+          <li>Your job is to be a calm, steady presence, not a medical decision-maker</li>
+          <li>Active labor (the longest phase) means contractions every 3–5 minutes for hours — this is normal</li>
+          <li>When unsure what to do: ask "what do you need right now?" — it's almost always the right move</li>
+          <li>Have the epidural, C-section, and cord-cutting conversations before labor starts, not during</li>
+        </ul>
+      </InsightBox>
+
       <p>
         You've watched labor on TV. A woman comes into the hospital, calmly tells her partner it's time, 
         they drive there in moderate traffic, she checks in, and 20 minutes later the baby is here. 
@@ -226,8 +236,15 @@ export function BlogContent() {
       <h2>Before you go to the hospital: what to bring and what to know</h2>
 
       <p>
-        <strong>Bring:</strong> Insurance cards, ID, a list of people to call, phone chargers, 
-        snacks, a change of clothes for you (you'll get sweaty), a camera or phone for photos, 
+        If you haven't yet read about the financial side of birth — hospital costs, insurance,
+        what to sort out in advance — our guide on{' '}
+        <a href="/blog/real-cost-of-having-a-baby-first-time-dads">the real cost of having a baby</a>{' '}
+        covers what to know before you walk into the hospital.
+      </p>
+
+      <p>
+        <strong>Bring:</strong> Insurance cards, ID, a list of people to call, phone chargers,
+        snacks, a change of clothes for you (you'll get sweaty), a camera or phone for photos,
         and a copy of your birth preferences (hospital has these but bring yours too).
       </p>
 
@@ -253,9 +270,11 @@ export function BlogContent() {
       </p>
 
       <p>
-        But when it's over, when you're holding this person you created who is now a separate human, 
-        it rewires something in you. Not immediately. Sometimes it takes a few days to feel real. 
-        But it happens.
+        But when it's over, when you're holding this person you created who is now a separate human,
+        it rewires something in you. Not immediately. Sometimes it takes a few days to feel real.
+        But it happens. If the bond takes longer than you expect,{' '}
+        <a href="/blog/how-to-bond-with-newborn-as-a-dad">that's more normal than you think</a> —
+        paternal bonding builds gradually through caregiving, not in a single moment.
       </p>
 
       <p>

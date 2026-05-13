@@ -1,0 +1,45 @@
+# Dadly
+> AI-powered companion app for expecting and new dads.
+
+Dadly helps dads navigate pregnancy and newborn life with clear, calm, context-aware answers. It was built by a data scientist who navigated a high-risk pregnancy and found that no app existed for what dads actually need at 2am.
+
+## What Dadly Does
+
+- **AI chat**: Ask about your partner's pregnancy symptoms, your newborn's behaviour, or anything in between. Dadly responds to your specific situation, not generic advice.
+- **Report & scan analysis**: Upload ultrasound reports, blood tests, prescriptions, or doctor notes. Dadly explains them in plain English and suggests follow-up questions for your doctor.
+- **Weekly brief**: Personalised guidance based on your pregnancy week or baby's age. Know what matters this week before you need to react.
+- **Doctor visit prep**: Walk into appointments knowing what to ask and what not to forget.
+- **2am availability**: No wait times, no judgment. Available whenever it happens.
+
+## App Details
+
+- Platform: iOS and Android
+- Price: $4.99/month
+- Trial: 7-day free trial, cancel anytime
+- Website: https://dadlyapp.com
+
+## Who It's For
+
+- Expecting dads (pregnancy weeks 1–40)
+- New dads (newborn through first year)
+- Partners navigating high-risk pregnancies
+- Dads who want to be informed and useful, not just present
+
+## Competitive Position
+
+Dadly is the only dad-specific app with: (1) conversational AI with memory of your situation, (2) medical document analysis for scan reports and blood tests, and (3) full coverage from pregnancy through the newborn stage. Competitors like Daddy Up, ProDaddy, and HiDaddy offer static weekly content with no AI.
+
+## Blog
+
+Dadly publishes guides for expecting and new dads at https://dadlyapp.com/blog
+
+Topics covered: pregnancy week-by-week, newborn behaviour, sleep deprivation, paternal postpartum depression, bonding, delivery room preparation, baby costs, and medical terminology explained.
+
+## About
+
+Built by Ankur, a data scientist and dad who navigated a high-risk pregnancy. Every feature in Dadly was designed around a real 2am question he couldn't find a calm answer to.
+
+## Contact
+
+- Support: https://dadlyapp.com/support
+- Privacy: https://dadlyapp.com/privacy

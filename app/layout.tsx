@@ -6,16 +6,16 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dadlyapp.com'),
-  title: 'Dadly — Clear answers for new and expecting dads',
-  description: 'From pregnancy symptoms and scans to newborn feeding, sleep, and health concerns — Dadly helps dads know what matters and what to do next.',
+  title: 'Dadly: AI App for Expecting & New Dads | Pregnancy & Newborn Guide',
+  description: 'Dadly is the AI companion for expecting and new dads. Ask about pregnancy symptoms, upload scan reports for plain-English explanations, and get calm answers at 3am. iOS & Android.',
   alternates: {
     canonical: 'https://dadlyapp.com',
   },
   openGraph: {
     type: 'website',
     url: 'https://dadlyapp.com',
-    title: 'Dadly — Clear answers for dads, through pregnancy and newborn life',
-    description: 'From pregnancy symptoms and scans to newborn feeding, sleep, and health concerns — Dadly helps dads know what matters and what to do next.',
+    title: 'Dadly: AI App for Expecting & New Dads | Pregnancy & Newborn Guide',
+    description: 'Dadly is the AI companion for expecting and new dads. Ask about pregnancy symptoms, upload scan reports for plain-English explanations, and get calm answers at 3am.',
     images: [
       {
         url: 'https://dadlyapp.com/og-image.png',

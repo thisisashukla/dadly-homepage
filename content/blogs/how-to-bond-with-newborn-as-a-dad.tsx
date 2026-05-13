@@ -28,8 +28,18 @@ export const meta: BlogMeta = {
 export function BlogContent() {
   return (
     <article className="article-body">
+      <InsightBox label="Key Takeaways">
+        <ul style={{ margin: 0, paddingLeft: '20px', lineHeight: 1.8 }}>
+          <li>Not feeling instantly bonded is normal — dads start with a different neurochemical baseline than moms</li>
+          <li>Bonding happens through caregiving, not in a single moment — it accumulates over hundreds of interactions</li>
+          <li>Daily skin-to-skin, bath time, walks, and one night feed are the fastest bonding accelerators</li>
+          <li>Most dads notice a clear shift between weeks 7–12, when the baby starts smiling back at them specifically</li>
+          <li>If nothing has shifted by 3 months and you feel empty or numb in general, consider speaking to a professional</li>
+        </ul>
+      </InsightBox>
+
       <p>
-        There's a moment in every birth movie where the father sees the baby for the first time 
+        There's a moment in every birth movie where the father sees the baby for the first time
         and tears stream down his face. It's a moment of pure love and connection — 
         this tiny human he created, finally here, finally real.
       </p>
@@ -126,10 +136,12 @@ export function BlogContent() {
       </p>
 
       <p>
-        <strong>One night feed is non-negotiable.</strong> If your partner is breastfeeding and pumping, 
-        you can take one night feed with a bottle. This is bonding time, not a favor. 
-        Midnight bottles are intimate. The baby is sleepy, the world is quiet, you're the primary thing 
-        keeping them soothed. Do this consistently.
+        <strong>One night feed is non-negotiable.</strong> If your partner is breastfeeding and pumping,
+        you can take one night feed with a bottle. This is bonding time, not a favor.
+        Midnight bottles are intimate. The baby is sleepy, the world is quiet, you're the primary thing
+        keeping them soothed. Do this consistently. (For how to split nights without destroying your
+        relationship, see our guide on{' '}
+        <a href="/blog/new-dad-sleep-deprivation-survival-guide">surviving sleep deprivation as a new dad</a>.)
       </p>
 
       <InsightBox label="The talking part matters">
@@ -171,15 +183,17 @@ export function BlogContent() {
       <h2>If it's still not there at three months</h2>
 
       <p>
-        First: You're not alone. Some dads feel nothing at three months. Some feel something by six. 
+        First: You're not alone. Some dads feel nothing at three months. Some feel something by six.
         The timeline varies.
       </p>
 
       <p>
-        Second: There's a difference between "bonding hasn't happened yet" and "I'm experiencing depression 
-        or disconnection that feels pathological." If you're not bonding and also feeling empty, numb, 
-        angry, or disconnected from everything else too, that's a sign to talk to someone. 
-        That's not a bonding problem. That's a mental health problem.
+        Second: There's a difference between "bonding hasn't happened yet" and "I'm experiencing depression
+        or disconnection that feels pathological." If you're not bonding and also feeling empty, numb,
+        angry, or disconnected from everything else too, that's a sign to talk to someone.
+        That's not a bonding problem. That's a mental health problem — and it's worth reading more about{' '}
+        <a href="/blog/do-dads-get-postpartum-depression">paternal postpartum depression</a>,
+        which is more common and more treatable than most dads realise.
       </p>
 
       <p>

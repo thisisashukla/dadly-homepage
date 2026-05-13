@@ -29,9 +29,19 @@ export const meta: BlogMeta = {
 export function BlogContent() {
   return (
     <article className="article-body">
+      <InsightBox label="Key Takeaways">
+        <ul style={{ margin: 0, paddingLeft: '20px', lineHeight: 1.8 }}>
+          <li>1 in 10 new dads experience postpartum depression — most cases go undetected</li>
+          <li>Paternal PPD looks like irritability, overwork, and withdrawal — not sadness or tears</li>
+          <li>Existing screening tools were designed for mothers and systematically miss dads</li>
+          <li>Treatment works: therapy, medication, and more sleep all help significantly</li>
+          <li>The first step is naming it — tell your doctor or partner directly</li>
+        </ul>
+      </InsightBox>
+
       <p>
-        There's a Reddit thread that surfaces every few weeks. A new dad, usually writing at 3am, 
-        asking a simple question that quietly destroys him: "I feel nothing. The baby is here, 
+        There's a Reddit thread that surfaces every few weeks. A new dad, usually writing at 3am,
+        asking a simple question that quietly destroys him: "I feel nothing. The baby is here,
         everyone is celebrating, and I feel... empty. Is something wrong with me?"
       </p>
 
@@ -179,10 +189,12 @@ export function BlogContent() {
       </p>
 
       <p>
-        <strong>Sleep deprivation beyond the newborn stage.</strong> Most new dads can push through 
-        three months of fragmented sleep. But if your baby isn't sleeping well at six months and 
-        you're still averaging 4 hours a night, and you have no one to tag-team with, the 
-        accumulated sleep debt becomes neurologically catastrophic.
+        <strong>Sleep deprivation beyond the newborn stage.</strong> Most new dads can push through
+        three months of fragmented sleep. But if your baby isn't sleeping well at six months and
+        you're still averaging 4 hours a night, and you have no one to tag-team with, the
+        accumulated sleep debt becomes neurologically catastrophic. For practical strategies on
+        managing this, see our guide on{' '}
+        <a href="/blog/new-dad-sleep-deprivation-survival-guide">new dad sleep deprivation and splitting night shifts fairly</a>.
       </p>
 
       <p>
@@ -222,6 +234,17 @@ export function BlogContent() {
         to help that they're not offering because nobody asked. Asking is not burdening people — it's giving 
         them the chance to help when you need it most. That's what family and friends are for.
       </InsightBox>
+
+      <h2>The connection to bonding difficulties</h2>
+
+      <p>
+        Paternal PPD and bonding difficulties often overlap — a dad who feels emotionally numb
+        may interpret that numbness as "not bonding" when the real issue is depression. If you're
+        not feeling connected to your baby and also feeling empty or withdrawn in general,
+        it's worth reading about{' '}
+        <a href="/blog/how-to-bond-with-newborn-as-a-dad">how bonding actually works for dads</a>{' '}
+        — and then talking to your doctor if the picture sounds more like depression than a slow bond.
+      </p>
 
       <h2>For partners reading this</h2>
 

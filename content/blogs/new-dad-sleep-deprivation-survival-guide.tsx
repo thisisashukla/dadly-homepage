@@ -29,6 +29,16 @@ export const meta: BlogMeta = {
 export function BlogContent() {
   return (
     <article className="article-body">
+      <InsightBox label="Key Takeaways">
+        <ul style={{ margin: 0, paddingLeft: '20px', lineHeight: 1.8 }}>
+          <li>New parents lose roughly 44 nights of sleep in the first year — the impact compounds over time</li>
+          <li>Sustained sleep loss drops testosterone ~30% and shrinks emotional regulation capacity</li>
+          <li>Hard handoffs ("1st stretch rule") work better than shared duty — off-duty means genuinely off</li>
+          <li>3am fights are sleep debt problems wearing a relationship mask — don't resolve them at 3am</li>
+          <li>Most babies sleep significantly better by 6–9 months; this phase is temporary</li>
+        </ul>
+      </InsightBox>
+
       <p>
         It happens at 3am. Your partner is frustrated, you're exhausted beyond reason, 
         and a conversation that should take five minutes spirals into the worst fight you've had in months 
@@ -193,9 +203,11 @@ export function BlogContent() {
       </p>
 
       <p>
-        <strong>Take a night off, fully.</strong> One night per week, if you can swing it, your partner takes 
-        the baby to sleep in another room. You sleep for 8 hours uninterrupted. Or vice versa. 
+        <strong>Take a night off, fully.</strong> One night per week, if you can swing it, your partner takes
+        the baby to sleep in another room. You sleep for 8 hours uninterrupted. Or vice versa.
         One night of real sleep per week is the difference between "surviving" and "actually fine."
+        This also creates dedicated bonding time — see how{' '}
+        <a href="/blog/how-to-bond-with-newborn-as-a-dad">night feeds can accelerate bonding for dads</a>.
       </p>
 
       <h2>Recovery: what to expect</h2>
@@ -220,10 +232,18 @@ export function BlogContent() {
       <h2>The relationship part</h2>
 
       <p>
-        Protect this: when you're not in a sleep emergency, talk about the sleep emergency. Agree on your 
-        on/off-duty schedule before you're desperate. Have conversations about resentment or frustration 
-        when you're both rested, not at 2am. And understand that your partner is not your enemy — 
+        Protect this: when you're not in a sleep emergency, talk about the sleep emergency. Agree on your
+        on/off-duty schedule before you're desperate. Have conversations about resentment or frustration
+        when you're both rested, not at 2am. And understand that your partner is not your enemy —
         sleep deprivation is. You're both on the same side, and you're both barely hanging on.
+      </p>
+
+      <p>
+        If the emotional disconnection feels like more than just tiredness — if you're feeling numb,
+        withdrawn, or like you're going through the motions without feeling anything — it's worth reading
+        about <a href="/blog/do-dads-get-postpartum-depression">paternal postpartum depression</a>.
+        Sleep deprivation and PPD overlap significantly in their symptoms, and telling them apart matters
+        for finding the right fix.
       </p>
 
       <p>
