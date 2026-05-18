@@ -49,8 +49,15 @@ const organizationJsonLd = {
   description: 'AI-powered companion app for expecting and new dads — pregnancy symptoms, scan analysis, newborn guidance.',
   founder: {
     '@type': 'Person',
+    '@id': 'https://dadlyapp.com/about#person',
     name: 'Ankur Shukla',
     jobTitle: 'Founder, Dadly',
+    url: 'https://dadlyapp.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/thisisashukla/',
+      'https://x.com/thisisashukla',
+      'https://wisdomquotes.in/',
+    ],
   },
 }
 
@@ -79,8 +86,15 @@ const softwareAppJsonLd = {
   ],
   author: {
     '@type': 'Person',
+    '@id': 'https://dadlyapp.com/about#person',
     name: 'Ankur Shukla',
     jobTitle: 'Founder, Dadly',
+    url: 'https://dadlyapp.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/thisisashukla/',
+      'https://x.com/thisisashukla',
+      'https://wisdomquotes.in/',
+    ],
   },
   aggregateRating: {
     '@type': 'AggregateRating',
@@ -514,7 +528,11 @@ export default function HomePage() {
             Built by a dad, for the partner role.
           </h2>
           <p style={{ fontSize: '16px', color: 'var(--muted)', lineHeight: 1.8, marginBottom: '14px' }}>
-            Dadly was started by Ankur Shukla, an engineer who became a dad and realised that almost every pregnancy and parenting app is written for the person who&apos;s pregnant — not the partner standing next to her trying to be useful.
+            Dadly was started by{' '}
+            <TrackingLink href="/about" location="homepage_founder_link" page="Dadly Homepage" style={{ color: 'var(--navy)', fontWeight: 600 }}>
+              Ankur Shukla
+            </TrackingLink>
+            , an iOS developer and engineer who became a dad and realised that almost every pregnancy and parenting app is written for the person who&apos;s pregnant — not the partner standing next to her trying to be useful.
           </p>
           <p style={{ fontSize: '16px', color: 'var(--muted)', lineHeight: 1.8, marginBottom: '14px' }}>
             The questions a dad has are different. <em>Is this symptom worth waking her up about? Is this report normal for the week we&apos;re in? Should I be doing more, or am I in the way? Why does our two-month-old grunt like that at night?</em> Dadly is built around those specific moments — grounded in your pregnancy week, your baby&apos;s age, and the conditions you&apos;ve told us her doctor is monitoring.

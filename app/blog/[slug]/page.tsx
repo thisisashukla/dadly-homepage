@@ -85,8 +85,15 @@ export default async function BlogPage({ params }: BlogPageProps) {
     description: blog.description,
     author: {
       '@type': 'Person',
+      '@id': 'https://dadlyapp.com/about#person',
       name: blog.author,
       jobTitle: blog.authorRole,
+      url: 'https://dadlyapp.com/about',
+      sameAs: [
+        'https://www.linkedin.com/in/thisisashukla/',
+        'https://x.com/thisisashukla',
+        'https://wisdomquotes.in/',
+      ],
     },
     publisher: {
       '@type': 'Organization',
@@ -155,7 +162,15 @@ export default async function BlogPage({ params }: BlogPageProps) {
       <p className="article-subtitle">{blog.subtitle}</p>
 
       <div className="article-meta">
-        <span className="meta-author">{blog.author}</span>
+        <TrackingLink
+          href="/about"
+          location="article_byline"
+          page={`article_${slug}`}
+          className="meta-author"
+          style={{ textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
+        >
+          {blog.author}
+        </TrackingLink>
         <span className="meta-dot">·</span>
         <span className="meta-detail">{blog.authorRole}</span>
         <span className="meta-dot">·</span>
@@ -178,23 +193,51 @@ export default async function BlogPage({ params }: BlogPageProps) {
         gap: '20px',
         alignItems: 'flex-start',
       }}>
-        <div style={{
-          width: '48px',
-          height: '48px',
-          borderRadius: '50%',
-          background: 'var(--navy, #1a2744)',
-          color: '#fff',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontSize: '18px',
-          fontWeight: 700,
-          flexShrink: 0,
-        }}>A</div>
+        <TrackingLink
+          href="/about"
+          location="article_author_bio_avatar"
+          page={`article_${slug}`}
+          aria-label="About Ankur Shukla"
+          style={{
+            width: '48px',
+            height: '48px',
+            borderRadius: '50%',
+            background: 'var(--navy, #1a2744)',
+            color: '#fff',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '18px',
+            fontWeight: 700,
+            flexShrink: 0,
+            textDecoration: 'none',
+          }}
+        >
+          A
+        </TrackingLink>
         <div>
-          <div style={{ fontSize: '14px', fontWeight: 700, marginBottom: '4px' }}>Ankur — Founder, Dadly</div>
+          <div style={{ fontSize: '14px', fontWeight: 700, marginBottom: '4px' }}>
+            <TrackingLink
+              href="/about"
+              location="article_author_bio_name"
+              page={`article_${slug}`}
+              style={{ color: 'inherit', textDecoration: 'none' }}
+            >
+              Ankur Shukla
+            </TrackingLink>
+            {' '}— Founder, Dadly
+          </div>
           <p style={{ fontSize: '13px', color: 'var(--muted)', margin: '0 0 10px', lineHeight: 1.6 }}>
-            Data scientist and dad who navigated a high-risk pregnancy. Built Dadly because no app existed for what dads actually need at 2am. Every article on this blog comes from real lived experience.
+            iOS developer and engineer. Navigated a high-risk pregnancy and built Dadly because no app existed for what dads actually need at 2am. Also makes{' '}
+            <a href="https://wisdomquotes.in/" target="_blank" rel="noopener noreferrer">Wisdom Quotes</a>. Every article on this blog comes from lived experience.{' '}
+            <TrackingLink
+              href="/about"
+              location="article_author_bio_more"
+              page={`article_${slug}`}
+              style={{ fontWeight: 600 }}
+            >
+              More about Ankur →
+            </TrackingLink>
           </p>
           <div style={{ fontSize: '12px', color: 'var(--muted)', background: 'var(--bg-warm, #f7f4ef)', borderRadius: '6px', padding: '8px 12px', lineHeight: 1.5 }}>
             <strong>Health content note:</strong> Articles on Dadly are for informational purposes and are not a substitute for professional medical advice. Always consult your doctor, midwife, or healthcare provider for guidance specific to your situation.

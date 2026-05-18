@@ -29,6 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...blogUrls,
     {
+      url: 'https://dadlyapp.com/about',
+      lastModified: '2026-05-18',
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: 'https://dadlyapp.com/privacy',
       lastModified: '2026-05-07',
       changeFrequency: 'yearly',

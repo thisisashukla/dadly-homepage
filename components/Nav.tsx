@@ -48,6 +48,11 @@ export function Nav() {
               </TrackingLink>
             </li>
             <li>
+              <TrackingLink href="/about" location="nav_about" page={page}>
+                About
+              </TrackingLink>
+            </li>
+            <li>
               <TrackingLink href={ctaHref} location="nav_cta" page={page} className="btn-nav">
                 Get started
               </TrackingLink>
@@ -86,6 +91,11 @@ export function Nav() {
           <li>
             <TrackingLink href="/blog" location="nav_blog" page={page} onClick={close}>
               Blog
+            </TrackingLink>
+          </li>
+          <li>
+            <TrackingLink href="/about" location="nav_about" page={page} onClick={close}>
+              About
             </TrackingLink>
           </li>
         </ul>

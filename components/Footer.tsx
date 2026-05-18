@@ -59,6 +59,11 @@ export default function Footer() {
           </TrackingLink>
         </li>
         <li>
+          <TrackingLink href="/about" location="footer_about" page={page}>
+            About
+          </TrackingLink>
+        </li>
+        <li>
           <TrackingLink href="/support" location="footer_support" page={page}>
             Support
           </TrackingLink>
