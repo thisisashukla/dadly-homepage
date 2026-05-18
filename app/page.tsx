@@ -3,7 +3,7 @@ import { PageViewTracker } from '@/components/PageViewTracker'
 import { TrackingLink } from '@/components/TrackingLink'
 import { ScrollReveal } from '@/components/ScrollReveal'
 import Image from 'next/image'
-import { getAllBlogSlugs, getBlogBySlug } from '@/lib/blogs'
+import { getBlogBySlug } from '@/lib/blogs'
 
 const homepageFaqs = [
   {
@@ -23,12 +23,20 @@ const homepageFaqs = [
     a: 'Dadly is an AI-powered app for both expecting and new dads. Ask about your partner\'s pregnancy symptoms, upload a scan or test result for a plain-English explanation, or ask about your newborn\'s behaviour. It responds to your specific situation — not generic advice.',
   },
   {
+    q: 'Can Dadly explain my ultrasound or blood test?',
+    a: 'Yes. Upload a photo or PDF of an ultrasound, blood test, prescription, or doctor\'s note and Dadly explains what the document is for, what it appears to say, what\'s reassuring, what\'s worth noting, and which follow-up questions to bring to the next appointment.',
+  },
+  {
     q: 'What can I ask Dadly at 3am?',
     a: 'Anything: Is this symptom normal at 30 weeks? What does this ultrasound result mean? The baby won\'t stop crying — what should I check? The baby\'s poop colour changed — is that okay? Why is my newborn grunting? Dadly is built for these exact moments, when it\'s too late to call anyone and Google is making things worse.',
   },
   {
     q: 'How much does Dadly cost?',
-    a: 'Dadly is $4.99 per month, with a 7-day free trial. Cancel anytime. Available on iOS and Android.',
+    a: 'Dadly is $4.99 per month or $39.99 per year (saves about 33%), with a 3-day free trial. Cancel anytime. Available on iOS and Android.',
+  },
+  {
+    q: 'Is Dadly a replacement for a doctor?',
+    a: 'No. Dadly helps you understand what\'s happening, ask better questions, and decide when something genuinely needs medical attention. It is not medical advice and does not replace your OB, midwife, or paediatrician.',
   },
 ]
 
@@ -39,6 +47,11 @@ const organizationJsonLd = {
   url: 'https://dadlyapp.com',
   logo: 'https://dadlyapp.com/og-image.png',
   description: 'AI-powered companion app for expecting and new dads — pregnancy symptoms, scan analysis, newborn guidance.',
+  founder: {
+    '@type': 'Person',
+    name: 'Ankur Shukla',
+    jobTitle: 'Founder, Dadly',
+  },
 }
 
 const softwareAppJsonLd = {
@@ -48,16 +61,31 @@ const softwareAppJsonLd = {
   applicationCategory: 'HealthApplication',
   operatingSystem: 'iOS, Android',
   description: 'AI companion for expecting and new dads. Ask about pregnancy symptoms, upload scan reports, get newborn guidance — available at 3am.',
-  offers: {
-    '@type': 'Offer',
-    price: '4.99',
-    priceCurrency: 'USD',
-    priceValidUntil: '2027-01-01',
-  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Monthly',
+      price: '4.99',
+      priceCurrency: 'USD',
+      priceValidUntil: '2027-01-01',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Yearly',
+      price: '39.99',
+      priceCurrency: 'USD',
+      priceValidUntil: '2027-01-01',
+    },
+  ],
   author: {
     '@type': 'Person',
-    name: 'Ankur',
+    name: 'Ankur Shukla',
     jobTitle: 'Founder, Dadly',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    reviewCount: '12',
   },
 }
 
@@ -77,7 +105,7 @@ const homepageFaqJsonLd = {
 export const metadata: Metadata = {
   title: 'Dadly: AI App for Expecting & New Dads | Pregnancy & Newborn Guide',
   description:
-    'Dadly is the AI companion for expecting and new dads. Ask about pregnancy symptoms, upload scan reports for plain-English explanations, and get calm answers at 3am. iOS & Android.',
+    'Dadly is the AI companion for expecting and new dads. Ask about pregnancy symptoms, upload scan reports for plain-English explanations, and get calm answers at 3am. iOS & Android. 3-day free trial.',
   alternates: {
     canonical: 'https://dadlyapp.com',
   },
@@ -149,10 +177,10 @@ export default function HomePage() {
 
           <div className="store-badges" style={{ marginBottom: '8px' }}>
             <TrackingLink href="/waitlist" location="hero_cta" page="Dadly Homepage" className="btn-dark" style={{ display: 'inline-flex', fontSize: '16px', padding: '15px 32px' }}>
-              Get Dadly — $4.99/mo <ArrowIcon />
+              Try Dadly free <ArrowIcon />
             </TrackingLink>
           </div>
-          <p className="hero-note">7-day free trial · Cancel anytime · iOS &amp; Android</p>
+          <p className="hero-note">3-day free trial · $4.99/mo or $39.99/yr · iOS &amp; Android</p>
         </div>
 
         {/* phone fan */}
@@ -162,7 +190,7 @@ export default function HomePage() {
               <div className="iphone-mock">
                 <div className="iphone-island" />
                 <div className="iphone-screen">
-                  <Image src="/assets/dadly-brief.webp" alt="Dadly weekly brief" width={603} height={1311} priority />
+                  <Image src="/assets/dadly-brief-week13.webp" alt="Dadly Week 13 weekly brief for expecting dads with three action items" width={603} height={1311} priority />
                 </div>
               </div>
             </div>
@@ -170,7 +198,7 @@ export default function HomePage() {
               <div className="iphone-mock">
                 <div className="iphone-island" />
                 <div className="iphone-screen">
-                  <Image src="/assets/dadly-chat.webp" alt="Dadly smart chat" width={603} height={1311} priority />
+                  <Image src="/assets/dadly-chat-home.webp" alt="Dadly chat home — dad-specific pregnancy questions for Week 13" width={603} height={1311} priority />
                 </div>
               </div>
             </div>
@@ -178,7 +206,7 @@ export default function HomePage() {
               <div className="iphone-mock">
                 <div className="iphone-island" />
                 <div className="iphone-screen">
-                  <Image src="/assets/dadly-analysis.webp" alt="Dadly report analysis" width={603} height={1311} priority />
+                  <Image src="/assets/dadly-report-ultrasound.webp" alt="Dadly ultrasound report analysis explained in plain English" width={603} height={1311} priority />
                 </div>
               </div>
             </div>
@@ -309,96 +337,98 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── SPLIT: CHAT ─── */}
-      <section className="section section-alt">
-        <div className="wrap">
-          <div className="split">
-            <div className="split-text reveal">
-              <span className="pill">2am Companion</span>
-              <h2>When something feels off,<br />ask Dadly first.</h2>
-              <p>Whether it&apos;s your partner&apos;s pain during pregnancy, a confusing symptom, or your baby acting differently than usual, Dadly helps you understand what may be going on and what deserves attention.</p>
-              <ul className="check-list">
-                <li><CheckIcon /> Ask about mom during pregnancy</li>
-                <li><CheckIcon /> Ask about baby after birth</li>
-                <li><CheckIcon /> Understand what may be normal vs concerning</li>
-                <li><CheckIcon /> Fast follow-up questions that narrow things down</li>
-              </ul>
-            </div>
-            <div className="split-phone reveal">
-              <div className="split-phone-frame">
-                <Image src="/assets/dadly-chat.webp" alt="Dadly Smart Chat interface" width={603} height={1311} loading="lazy" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── SPLIT: BRIEF ─── */}
-      <section className="section">
-        <div className="wrap">
-          <div className="split flip">
-            <div className="split-text reveal">
-              <span className="pill">Weekly Guidance</span>
-              <h2>Know what matters this week —<br />before and after birth.</h2>
-              <p>Dadly gives you a personalised brief based on where you are in the journey. During pregnancy, it helps you understand what&apos;s happening with mom and baby this week. After birth, it helps you understand what&apos;s changing in your baby&apos;s development.</p>
-              <ul className="check-list">
-                <li><CheckIcon /> Personalised by pregnancy week or baby age</li>
-                <li><CheckIcon /> Clear priorities, not information overload</li>
-                <li><CheckIcon /> Helps you stay ahead instead of reacting late</li>
-                <li><CheckIcon /> Makes you more useful day to day</li>
-              </ul>
-            </div>
-            <div className="split-phone reveal">
-              <div className="split-phone-frame">
-                <Image src="/assets/dadly-brief.webp" alt="Dadly weekly brief showing Week 9 guidance" width={603} height={1311} loading="lazy" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── SPLIT: REPORTS ─── */}
+      {/* ─── SPLIT: REPORTS & SCANS ─── */}
       <section className="section section-alt">
         <div className="wrap">
           <div className="split">
             <div className="split-text reveal">
               <span className="pill">Reports &amp; Scans</span>
-              <h2>Medical language,<br />translated for dads.</h2>
-              <p>Scans, blood tests, prescriptions, and doctor notes can be hard to interpret when you&apos;re stressed. Dadly explains what the document is for, what it seems to say, what looks reassuring, and what may need follow-up.</p>
+              <h2>Snap your ultrasound.<br />Walk out understanding it.</h2>
+              <p>Upload a photo of an ultrasound, blood test, or prescription and Dadly walks you through it — what the test is for, what the findings appear to say, what&apos;s reassuring, what&apos;s worth noting, and which follow-up questions to bring to the next appointment.</p>
               <ul className="check-list">
-                <li><CheckIcon /> Understand reports for mom during pregnancy</li>
-                <li><CheckIcon /> Understand reports for baby after birth</li>
-                <li><CheckIcon /> Clear summary in plain English</li>
-                <li><CheckIcon /> Suggested follow-up questions for your doctor</li>
+                <li><CheckIcon /> Plain-English summary of every line</li>
+                <li><CheckIcon /> &quot;Reassuring&quot; vs &quot;worth noting&quot; flags</li>
+                <li><CheckIcon /> Suggested questions for your doctor</li>
+                <li><CheckIcon /> Works for pregnancy and newborn reports</li>
               </ul>
             </div>
             <div className="split-phone reveal">
               <div className="split-phone-frame">
-                <Image src="/assets/dadly-analysis.webp" alt="Dadly medical report analysis" width={603} height={1311} loading="lazy" />
+                <Image src="/assets/dadly-report-ultrasound.webp" alt="Dadly app analysing an uploaded ultrasound report for an expecting dad" width={603} height={1311} loading="lazy" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ─── SPLIT: CUSTOMISE ─── */}
+      {/* ─── SPLIT: WEEKLY BRIEF ─── */}
       <section className="section">
         <div className="wrap">
           <div className="split flip">
             <div className="split-text reveal">
-              <span className="pill">Your Situation</span>
-              <h2>Advice that fits your family,<br />not just a generic scenario.</h2>
-              <p>Pregnancy history, monitored conditions, baby age, and prior reports all change what advice is helpful. Dadly keeps that context in mind so answers feel grounded in your reality.</p>
+              <span className="pill">Weekly Brief</span>
+              <h2>Three things to actually do<br />this week. Not 40 things to read.</h2>
+              <p>Every week of pregnancy and every month of newborn life, Dadly gives you a short, dad-shaped brief: what&apos;s changing, three concrete things to do, what to watch for, and why this week matters. No overwhelming wall of articles — just what&apos;s actually useful right now.</p>
               <ul className="check-list">
-                <li><CheckIcon /> Pregnancy context for mom</li>
-                <li><CheckIcon /> Baby-age-aware guidance after birth</li>
-                <li><CheckIcon /> Uses prior history and earlier reports</li>
-                <li><CheckIcon /> More relevant answers, less noise</li>
+                <li><CheckIcon /> Personalised by pregnancy week or baby age</li>
+                <li><CheckIcon /> Three concrete actions, not 40 articles</li>
+                <li><CheckIcon /> &quot;Why this week matters&quot; context</li>
+                <li><CheckIcon /> Tailored to conditions her doctor is monitoring</li>
               </ul>
             </div>
             <div className="split-phone reveal">
               <div className="split-phone-frame">
-                <Image src="/assets/dadly-customise.webp" alt="Dadly situation customisation screen" width={603} height={1311} loading="lazy" />
+                <Image src="/assets/dadly-brief-week13.webp" alt="Dadly Week 13 weekly brief showing three action items for the second trimester" width={603} height={1311} loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── REAL QUESTIONS (SEO long-form) ─── */}
+      <section className="section section-alt">
+        <div className="wrap">
+          <div className="t-center" style={{ marginBottom: '36px' }}>
+            <div className="eyebrow">Real questions Dadly answers</div>
+            <h2 className="heading" style={{ maxWidth: '620px', margin: '0 auto 14px' }}>
+              The questions you&apos;d Google at 2am —<br />answered for your week, not a stranger&apos;s.
+            </h2>
+            <p className="subtext" style={{ maxWidth: '560px', margin: '0 auto' }}>
+              These are the kinds of things dads actually ask Dadly. Every answer is grounded in your pregnancy week or baby&apos;s age and any health context you&apos;ve shared.
+            </p>
+          </div>
+
+          <div className="split" style={{ alignItems: 'center' }}>
+            <div className="split-text reveal">
+              <div style={{ display: 'grid', gap: '14px' }}>
+                <div style={{ background: 'var(--card)', border: '1px solid var(--rule)', borderRadius: '14px', padding: '18px 20px' }}>
+                  <p style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--gold)', margin: '0 0 8px' }}>Pregnancy</p>
+                  <h3 style={{ fontSize: '16px', fontWeight: 600, lineHeight: 1.4, margin: '0 0 6px' }}>&ldquo;Her amniotic fluid measurement looked a bit high at the scan — should I be worried?&rdquo;</h3>
+                  <p style={{ fontSize: '14px', color: 'var(--muted)', margin: 0, lineHeight: 1.65 }}>Dadly explains what the measurement means at your specific week, when it&apos;s usually a recheck vs an actual concern, and exactly what to ask the OB at the next visit.</p>
+                </div>
+
+                <div style={{ background: 'var(--card)', border: '1px solid var(--rule)', borderRadius: '14px', padding: '18px 20px' }}>
+                  <p style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--gold)', margin: '0 0 8px' }}>Newborn</p>
+                  <h3 style={{ fontSize: '16px', fontWeight: 600, lineHeight: 1.4, margin: '0 0 6px' }}>&ldquo;The baby&apos;s poop went from yellow to green — is that normal?&rdquo;</h3>
+                  <p style={{ fontSize: '14px', color: 'var(--muted)', margin: 0, lineHeight: 1.65 }}>Dadly maps the colour to your baby&apos;s age and feeding type, tells you which colour changes are routine, which deserve a call to the paediatrician, and what to track in the meantime.</p>
+                </div>
+
+                <div style={{ background: 'var(--card)', border: '1px solid var(--rule)', borderRadius: '14px', padding: '18px 20px' }}>
+                  <p style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--gold)', margin: '0 0 8px' }}>Doctor visit</p>
+                  <h3 style={{ fontSize: '16px', fontWeight: 600, lineHeight: 1.4, margin: '0 0 6px' }}>&ldquo;We have the 20-week anatomy scan tomorrow — what should I actually ask?&rdquo;</h3>
+                  <p style={{ fontSize: '14px', color: 'var(--muted)', margin: 0, lineHeight: 1.65 }}>Dadly generates a one-page doctor brief: the questions worth asking at this scan, what each one tells you, and what to do with the answers afterward.</p>
+                </div>
+
+                <div style={{ background: 'var(--card)', border: '1px solid var(--rule)', borderRadius: '14px', padding: '18px 20px' }}>
+                  <p style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--gold)', margin: '0 0 8px' }}>Mental health</p>
+                  <h3 style={{ fontSize: '16px', fontWeight: 600, lineHeight: 1.4, margin: '0 0 6px' }}>&ldquo;I&apos;ve been weirdly anxious since the second trimester started — is that a thing for dads?&rdquo;</h3>
+                  <p style={{ fontSize: '14px', color: 'var(--muted)', margin: 0, lineHeight: 1.65 }}>Yes — paternal anxiety is real and common. Dadly explains what tends to show up at each phase, what helps, and when it&apos;s worth talking to someone.</p>
+                </div>
+              </div>
+            </div>
+            <div className="split-phone reveal">
+              <div className="split-phone-frame">
+                <Image src="/assets/dadly-chat-answer.webp" alt="Dadly answering a dad's question about amniotic fluid measurement at Week 13" width={603} height={1311} loading="lazy" />
               </div>
             </div>
           </div>
@@ -406,7 +436,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── TESTIMONIALS ─── */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="wrap t-center">
           <div className="eyebrow">What dads are saying</div>
           <h2 className="heading" style={{ maxWidth: '440px', margin: '0 auto' }}>From the dads who use it at 2am.</h2>
@@ -442,14 +472,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── FROM THE BLOG ─── */}
-      <section className="section">
+      {/* ─── FROM THE BLOG (moved earlier) ─── */}
+      <section className="section section-alt">
         <div className="wrap t-center">
           <div className="eyebrow">From the Dadly blog</div>
           <h2 className="heading" style={{ maxWidth: '520px', margin: '0 auto 14px' }}>
-            Guides written for dads,<br />not the couple.
+            Not ready to install yet?<br />Read a free guide first.
           </h2>
-          <p className="subtext" style={{ maxWidth: '460px', margin: '0 auto 32px' }}>
+          <p className="subtext" style={{ maxWidth: '480px', margin: '0 auto 32px' }}>
             Practical articles on pregnancy symptoms, newborn life, mental health, and the delivery room — written from the dad&apos;s perspective.
           </p>
           <div className="feat-grid" style={{ textAlign: 'left' }}>
@@ -473,6 +503,25 @@ export default function HomePage() {
               Read all guides →
             </TrackingLink>
           </div>
+        </div>
+      </section>
+
+      {/* ─── FOUNDER / WHY WE BUILT THIS (E-E-A-T) ─── */}
+      <section className="section">
+        <div className="wrap" style={{ maxWidth: '720px' }}>
+          <div className="eyebrow" style={{ textAlign: 'center' }}>Why we built Dadly</div>
+          <h2 className="heading" style={{ textAlign: 'center', margin: '0 0 24px' }}>
+            Built by a dad, for the partner role.
+          </h2>
+          <p style={{ fontSize: '16px', color: 'var(--muted)', lineHeight: 1.8, marginBottom: '14px' }}>
+            Dadly was started by Ankur Shukla, an engineer who became a dad and realised that almost every pregnancy and parenting app is written for the person who&apos;s pregnant — not the partner standing next to her trying to be useful.
+          </p>
+          <p style={{ fontSize: '16px', color: 'var(--muted)', lineHeight: 1.8, marginBottom: '14px' }}>
+            The questions a dad has are different. <em>Is this symptom worth waking her up about? Is this report normal for the week we&apos;re in? Should I be doing more, or am I in the way? Why does our two-month-old grunt like that at night?</em> Dadly is built around those specific moments — grounded in your pregnancy week, your baby&apos;s age, and the conditions you&apos;ve told us her doctor is monitoring.
+          </p>
+          <p style={{ fontSize: '16px', color: 'var(--muted)', lineHeight: 1.8, marginBottom: 0 }}>
+            We don&apos;t replace your OB, midwife, or paediatrician. We help you walk into appointments knowing what to ask, walk out understanding what was said, and handle the long stretches in between with less panic and more presence.
+          </p>
         </div>
       </section>
 
@@ -509,19 +558,19 @@ export default function HomePage() {
             <div className="pricing-card reveal">
               <div className="pricing-badge">Everything included</div>
               <div className="pricing-price"><sup>$</sup>4.99</div>
-              <div className="pricing-period">per month · cancel anytime</div>
+              <div className="pricing-period">per month · or <strong>$39.99/year</strong> (save 33%)</div>
               <ul className="p-list">
                 <li>Unlimited chat for pregnancy and newborn questions</li>
                 <li>Weekly brief based on your stage</li>
-                <li>Report and scan analysis</li>
-                <li>Doctor visit prep</li>
+                <li>Unlimited report and scan analysis</li>
+                <li>Doctor visit prep (one-tap doctor brief)</li>
                 <li>Context-aware answers across mom and baby</li>
                 <li>Always there for late-night questions</li>
               </ul>
               <TrackingLink href="/waitlist" location="pricing_card" page="Dadly Homepage" className="btn-gold">
-                Start your free trial
+                Start your 3-day free trial
               </TrackingLink>
-              <p className="pricing-note">7-day free trial · Cancel anytime</p>
+              <p className="pricing-note">3-day free trial · Cancel anytime</p>
             </div>
           </div>
         </div>

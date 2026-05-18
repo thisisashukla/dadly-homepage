@@ -237,7 +237,377 @@ export const blogRegistry: Record<string, BlogMeta> = {
         answer: 'WIC (Women, Infants, and Children): income-based federal program covering formula and some food — many families qualify without realising it. Dependent Care FSA: lets you pay childcare costs with pre-tax dollars, saving 20-30% depending on your tax bracket. Child Tax Credit: up to $2,000 per child in federal tax credits. Employer benefits: many companies offer paid parental leave, backup childcare, or childcare FSA contributions — check your HR handbook. State programs vary widely; search your state\'s Department of Health for local support.'
       }
     ]
-  }
+  },
+  '20-week-anatomy-scan-dad-guide': {
+    slug: '20-week-anatomy-scan-dad-guide',
+    title: '20-Week Anatomy Scan: A Dad\'s Complete Guide',
+    subtitle: 'What they\'re checking, what the numbers mean, and what to do if they find something.',
+    description: 'Everything dads need to know about the 20-week anatomy scan — what\'s checked head to toe, what soft markers actually mean, and how to stay steady when they ask you to come back.',
+    keywords: ['20-week anatomy scan dad', '20 week scan what to expect', 'anatomy scan soft marker', 'anomaly scan dad guide', 'fetal anatomy scan explained'],
+    author: 'Ankur',
+    authorRole: 'Founder, Dadly',
+    datePublished: '2026-05-18',
+    dateModified: '2026-05-18',
+    readTime: '11 min',
+    category: 'Pregnancy',
+    tags: ['anatomy scan', 'pregnancy', 'second trimester', 'ultrasound'],
+    wordCount: 2100,
+    faqs: [
+      {
+        question: 'Can the anatomy scan miss abnormalities?',
+        answer: 'Yes. The 20-week scan is a screening tool, not a guarantee. Around 50% of heart defects are missed on anatomy scan. Some conditions only become visible later in pregnancy. A normal scan is very reassuring, but it doesn\'t mean everything will be perfect — and a flagged finding doesn\'t mean something is wrong.'
+      },
+      {
+        question: 'What happens if something is found at the anatomy scan?',
+        answer: 'It depends on what\'s found. Most findings result in a follow-up scan in 2–4 weeks, a referral to a fetal medicine specialist, or simply watchful waiting. The vast majority of flagged findings — especially soft markers — either resolve on their own or turn out to be insignificant. Being asked to come back is not the same as something being wrong.'
+      },
+      {
+        question: 'Can dads and partners attend the 20-week anatomy scan?',
+        answer: 'Yes, and they absolutely should. This scan often lasts 45–60 minutes. It\'s the most detailed look at your baby before birth. In most hospitals, one support person is welcome throughout. Bring your partner. You\'ll both remember it.'
+      },
+      {
+        question: 'Does it matter if the placenta is posterior versus anterior?',
+        answer: 'An anterior placenta (at the front) means kicks may feel more muffled — the placenta is cushioning them. There is no clinical significance for most pregnancies. A low-lying placenta (placenta praevia) is different and will be monitored closely — you\'ll be told if this applies.'
+      },
+      {
+        question: 'What is a soft marker at the anatomy scan?',
+        answer: 'A soft marker is a minor finding that slightly increases the statistical probability of certain conditions — but often resolves and frequently means nothing. Common examples: a choroid plexus cyst (a tiny fluid-filled space in the brain, present in 1–2% of pregnancies and almost always resolves by week 28) or an echogenic intracardiac focus (a bright spot in the heart, common and usually insignificant). If a soft marker is found, the doctor will put it in context of your age, your combined screening results, and how many markers are present.'
+      }
+    ]
+  },
+  'baby-poop-color-chart-new-dad': {
+    slug: 'baby-poop-color-chart-new-dad',
+    title: 'Baby Poop Color Chart: What Every New Dad Needs to Know',
+    subtitle: 'From black tar to mustard yellow — what\'s normal, what\'s not, and when to actually call the doctor.',
+    description: 'A plain-English guide for new dads to baby poop color, consistency, and frequency — what meconium is, why breastfed poop looks like diarrhea, and the two colors that mean call the doctor now.',
+    keywords: ['baby poop color chart', 'newborn poop colors', 'meconium first poop', 'breastfed baby poop', 'baby green poop normal', 'white poop baby emergency'],
+    author: 'Ankur',
+    authorRole: 'Founder, Dadly',
+    datePublished: '2026-05-18',
+    dateModified: '2026-05-18',
+    readTime: '9 min',
+    category: 'Newborn',
+    tags: ['newborn', 'baby health', 'feeding', 'new dad basics'],
+    wordCount: 1950,
+    faqs: [
+      {
+        question: 'Is green poop normal in newborns?',
+        answer: 'Mostly yes. Green poop is common in the first few days as meconium transitions to normal stool. In breastfed babies, green frothy poop can sometimes indicate a foremilk-hindmilk imbalance. Formula-fed babies often have greener stools due to iron in the formula. Occasional green stool in an otherwise happy, feeding, gaining-weight baby is not a concern.'
+      },
+      {
+        question: 'Why does breastfed baby poop look like diarrhea?',
+        answer: 'Because it\'s supposed to. Breastmilk is almost entirely absorbed, leaving very little solid waste. Breastfed baby stool is mustard-yellow, loose, and often seedy or grainy — and that\'s completely normal. True diarrhea in a newborn is a sudden increase in frequency and wateriness, often with mucus, and usually accompanied by other signs the baby is unwell.'
+      },
+      {
+        question: 'What does blood in baby stool look like?',
+        answer: 'Bright red streaks usually suggest a small anal fissure — common and usually harmless, but worth mentioning at the next appointment. A pink tinge throughout the stool could indicate something further up the GI tract. Red or pink poop should always get a call to your doctor or health visitor the same day.'
+      },
+      {
+        question: 'How often should a newborn poop?',
+        answer: 'It varies enormously. In the first weeks, breastfed babies often poop up to 8–10 times a day. Then around 6 weeks, many can go anywhere from 1–2 days to a full week without pooping. Both are normal if the baby is feeding well, gaining weight, and the stool is soft when it comes. Formula-fed babies tend to poop more consistently — usually once or more per day.'
+      },
+      {
+        question: 'When should baby poop stop being yellow and seedy?',
+        answer: 'Around 4–6 months when solid foods begin. The introduction of purees changes color and texture significantly — it becomes browner, thicker, and more adult-like in smell. Until then, yellow and seedy (for breastfed babies) is exactly right.'
+      }
+    ]
+  },
+  'pelvic-girdle-pain-pregnancy-what-dads-need-to-know': {
+    slug: 'pelvic-girdle-pain-pregnancy-what-dads-need-to-know',
+    title: 'Pelvic Girdle Pain During Pregnancy: What Dads Need to Know at 3am',
+    subtitle: 'She can\'t turn over in bed. You don\'t know what to do. Here\'s what actually helps.',
+    description: 'A practical guide for dads when their partner has pelvic girdle pain (PGP) during pregnancy — what it is, how to help at night, what not to do, and whether it affects the birth.',
+    keywords: ['pelvic girdle pain pregnancy', 'SPD pregnancy partner help', 'PGP pregnancy dad guide', 'symphysis pubis dysfunction', 'how to help partner with PGP'],
+    author: 'Ankur',
+    authorRole: 'Founder, Dadly',
+    datePublished: '2026-05-18',
+    dateModified: '2026-05-18',
+    readTime: '10 min',
+    category: 'Pregnancy',
+    tags: ['PGP', 'SPD', 'pregnancy pain', 'partner support'],
+    wordCount: 2000,
+    faqs: [
+      {
+        question: 'Is pelvic girdle pain the same as SPD?',
+        answer: 'Not exactly, but the terms are often used interchangeably. Symphysis Pubis Dysfunction (SPD) refers specifically to pain at the symphysis pubis — the joint at the front of the pelvis. Pelvic Girdle Pain (PGP) is the broader term covering pain in any of the three pelvic joints. The management is similar for both.'
+      },
+      {
+        question: 'How can I help my partner with PGP at night?',
+        answer: 'The most immediately helpful things: put a pillow between her knees when she\'s lying on her side — this alone reduces strain significantly. When she needs to turn over, help her roll as a single unit — knees together, move hips and shoulders at the same time. Make sure she swings both legs off the bed together rather than one at a time.'
+      },
+      {
+        question: 'Does pelvic girdle pain affect labor and birth?',
+        answer: 'Usually not significantly. Most women with PGP are able to give birth vaginally. Let the midwifery team know in advance — they can plan positions that don\'t require wide leg separation. A pool birth often helps as the water reduces load on the joints.'
+      },
+      {
+        question: 'Will PGP go away after the baby is born?',
+        answer: 'Usually yes, though the timeline varies. Many women notice significant improvement within days to weeks of birth as relaxin levels fall. For some, it takes months. Postnatal physiotherapy speeds recovery considerably.'
+      },
+      {
+        question: 'When should we see a physiotherapist about PGP?',
+        answer: 'As soon as it starts. Early diagnosis leads to much better management. Your GP or midwife can refer you, or you can self-refer to many NHS physiotherapy services. Don\'t wait until it becomes debilitating.'
+      }
+    ]
+  },
+  'why-is-my-newborn-grunting': {
+    slug: 'why-is-my-newborn-grunting',
+    title: 'Why Is My Newborn Grunting? Normal vs. Concerning',
+    subtitle: 'Alarming sounds from a sleeping baby are almost always normal. Here\'s what\'s actually happening and when to worry.',
+    description: 'Newborn grunting explained for new dads: grunting baby syndrome, active sleep sounds, and the warning signs that actually need attention.',
+    keywords: ['newborn grunting', 'grunting baby syndrome', 'infant dyschezia', 'newborn sounds', 'baby grunting in sleep'],
+    author: 'Ankur',
+    authorRole: 'Founder, Dadly',
+    datePublished: '2026-05-18',
+    dateModified: '2026-05-18',
+    readTime: '8 min',
+    category: 'Newborn',
+    tags: ['newborn', 'grunting', 'baby sounds', 'infant dyschezia'],
+    wordCount: 1900,
+    faqs: [
+      {
+        question: 'Is grunting baby syndrome dangerous?',
+        answer: 'No — it\'s a coordination issue, not a medical problem. Baby simply hasn\'t learned to relax the pelvic floor while bearing down. It looks alarming but it\'s harmless and resolves on its own by around 12 weeks.'
+      },
+      {
+        question: 'Should I help my baby poop when they\'re grunting and straining?',
+        answer: 'No. Baby needs to learn this muscle coordination themselves. Stimulating them resets the learning process. Let them work through it. The only exception: if baby hasn\'t produced a stool in 5 or more days, call your doctor.'
+      },
+      {
+        question: 'Why does my newborn grunt in their sleep?',
+        answer: 'Newborns spend about 50% of their sleep time in active (REM) sleep, compared to around 25% for adults. Active sleep is loud — grunts, sighs, twitches, and small cries are all normal. Baby is not in distress.'
+      },
+      {
+        question: 'When will grunting baby syndrome go away?',
+        answer: 'Typically by around 12 weeks. As baby\'s muscles mature and coordination improves, the straining and grunting during bowel movements resolves on its own. No treatment is needed or recommended.'
+      },
+      {
+        question: 'How do I know if my newborn\'s grunting is a sign of a breathing problem?',
+        answer: 'Concerning signs: grunting with every single breath (not just during straining or sleep), fast breathing over 60 breaths per minute, blue or grey lips or skin, flared nostrils, or the chest visibly sucking inward between the ribs. If you see any of these — call emergency services immediately.'
+      }
+    ]
+  },
+  'hospital-bag-checklist-for-dad': {
+    slug: 'hospital-bag-checklist-for-dad',
+    title: 'Hospital Bag Checklist for Dad: What to Actually Pack',
+    subtitle: 'Most dad bag lists are three bullet points at the bottom of the mum\'s list. You\'re potentially there for four days. Pack properly.',
+    description: 'The complete hospital bag checklist for dads — what to pack, what everyone forgets, and how to stay functional so you can actually support your partner.',
+    keywords: ['hospital bag for dad', 'hospital bag checklist dad', 'what to pack in hospital bag dad', 'birth bag for dads'],
+    author: 'Ankur',
+    authorRole: 'Founder, Dadly',
+    datePublished: '2026-05-18',
+    dateModified: '2026-05-18',
+    readTime: '9 min',
+    category: 'Pregnancy',
+    tags: ['hospital bag', 'birth preparation', 'labour', 'pregnancy'],
+    wordCount: 2000,
+    faqs: [
+      {
+        question: 'How many nights should I pack for in a hospital bag?',
+        answer: 'For a vaginal birth, typically 1–2 nights. For a planned or emergency C-section, 2–4 nights. Pack for the longer scenario regardless — you often don\'t know which way it\'s going until it\'s happening.'
+      },
+      {
+        question: 'Can dads stay overnight at the hospital?',
+        answer: 'It varies by hospital and room type. Many hospitals allow a partner to stay overnight in a private room, but not in shared bays. Call ahead to ask specifically rather than assuming or finding out at 2am.'
+      },
+      {
+        question: 'What snacks are best for a long labour?',
+        answer: 'High-calorie, no-preparation snacks that won\'t make you feel nauseous: protein bars, nuts, dried fruit, crackers. Avoid anything with a strong smell — she may be extremely sensitive to food odours during active labour.'
+      },
+      {
+        question: 'Should I bring a camera or just use my phone?',
+        answer: 'Phone is usually fine if storage is cleared and battery is full. If proper birth photos matter to you, bring a dedicated camera — phone shots in dim hospital lighting often disappoint. Clear the storage beforehand regardless.'
+      },
+      {
+        question: 'What\'s the one thing dads always forget to pack?',
+        answer: 'Food and water for themselves. Everyone remembers things for the mum and baby. No one packs a proper insulated water bottle and two days of snacks for the person standing at the bedside for 12–18 hours.'
+      }
+    ]
+  },
+  'week-28-pregnancy-dads-guide': {
+    slug: 'week-28-pregnancy-dads-guide',
+    title: 'Week 28 Pregnancy: The Dad\'s Complete Guide to the Third Trimester',
+    subtitle: 'The third trimester starts now. Here\'s what\'s happening with the baby, what your partner is experiencing, and what you actually need to do this week.',
+    description: 'Week 28 pregnancy guide for dads: what baby looks like, what your partner is going through, and the practical steps to take as the third trimester begins.',
+    keywords: ['28 weeks pregnant dad', 'third trimester dad guide', 'week 28 pregnancy', 'pregnancy third trimester partner'],
+    author: 'Ankur',
+    authorRole: 'Founder, Dadly',
+    datePublished: '2026-05-18',
+    dateModified: '2026-05-18',
+    readTime: '10 min',
+    category: 'Pregnancy',
+    tags: ['pregnancy', 'third trimester', 'week 28', 'birth preparation'],
+    wordCount: 2100,
+    faqs: [
+      {
+        question: 'Is week 28 the start of the third trimester?',
+        answer: 'Yes — week 28 marks the beginning of the third trimester. Some sources say 27 weeks, but 28 is the most widely used clinical benchmark.'
+      },
+      {
+        question: 'What does viability at 28 weeks mean?',
+        answer: 'At 28 weeks, a baby born prematurely has roughly a 90%+ survival rate with specialist neonatal intensive care. Viability technically begins at 24 weeks, but outcomes improve significantly with each passing week.'
+      },
+      {
+        question: 'How often should I feel baby kicks at 28 weeks?',
+        answer: 'From 28 weeks, you should feel at least 10 distinct movements in a 2-hour period during baby\'s active times. If baby\'s movement pattern changes significantly or drops off, contact your midwife — that\'s what they\'re there for.'
+      },
+      {
+        question: 'What is the glucose tolerance test and what do the results mean?',
+        answer: 'A blood test usually done at 24–28 weeks to screen for gestational diabetes. A result above the threshold doesn\'t mean the pregnancy is high-risk — it means dietary adjustments and closer monitoring. The majority of cases are managed with diet alone.'
+      },
+      {
+        question: 'What should dads be doing to prepare at 28 weeks?',
+        answer: 'Pack or plan the hospital bag, do the hospital tour, talk through the birth plan together, research Group B Strep (the swab is at 36–37 weeks), and know the warning signs of preeclampsia. The last 12 weeks go faster than you think.'
+      }
+    ]
+  },
+  'group-b-strep-positive-what-dads-need-to-know': {
+    slug: 'group-b-strep-positive-what-dads-need-to-know',
+    title: 'Group B Strep Positive: What Dads Need to Know',
+    subtitle: 'The test, the result, what it actually means for the birth — and the one thing you must tell triage when labour starts.',
+    description: 'Your partner tested positive for Group B Strep. Here\'s what it means, what happens next, and what dads specifically need to know before and during labour.',
+    keywords: ['group B strep pregnancy dad', 'GBS positive pregnancy', 'group B streptococcus birth plan', 'GBS antibiotics labour'],
+    author: 'Ankur',
+    authorRole: 'Founder, Dadly',
+    datePublished: '2026-05-18',
+    dateModified: '2026-05-18',
+    readTime: '9 min',
+    category: 'Pregnancy',
+    tags: ['group B strep', 'GBS', 'pregnancy', 'birth plan'],
+    wordCount: 1950,
+    faqs: [
+      {
+        question: 'Can Group B Strep harm my partner?',
+        answer: 'GBS rarely causes illness in healthy adults. Your partner is a carrier — the bacteria is present naturally, but she is not sick. The concern is specifically about the baby during birth.'
+      },
+      {
+        question: 'Does GBS affect whether we can have a C-section?',
+        answer: 'If a planned C-section is performed before labour begins and before waters break, the risk of GBS transmission is very low. In this case antibiotics may not be required, though your OB will advise based on your specific situation.'
+      },
+      {
+        question: 'What if the antibiotics aren\'t given in time during labour?',
+        answer: 'If labour progresses quickly, the baby will be more closely monitored after birth for signs of GBS infection. This is not a crisis — it\'s a higher-watch situation. The medical team knows the protocol.'
+      },
+      {
+        question: 'Can GBS come back or change between pregnancies?',
+        answer: 'Yes — GBS can come and go. A negative test in one pregnancy does not guarantee a negative result in the next. Testing is always repeated in each pregnancy.'
+      },
+      {
+        question: 'What are the signs of GBS infection in a newborn to watch for?',
+        answer: 'Fever, fast or laboured breathing, poor feeding, limpness, high-pitched cry, or the baby being unusually hard to wake. These typically appear within the first 12 hours to 7 days. Contact your midwife or paediatrician immediately if you notice any of these.'
+      }
+    ]
+  },
+  'paternal-anxiety-during-pregnancy-why-dads-worry': {
+    slug: 'paternal-anxiety-during-pregnancy-why-dads-worry',
+    title: 'Paternal Anxiety During Pregnancy: Why Dads Worry (And What to Do About It)',
+    subtitle: 'Nobody prepared you for how scared you\'d be. Here\'s why it happens, what the research actually says, and what genuinely helps.',
+    description: 'Paternal anxiety during pregnancy is common, measurable, and almost never talked about. This guide covers the research, the specific fears dads carry, Couvade syndrome, and what actually helps.',
+    keywords: ['paternal anxiety during pregnancy', 'expecting dad anxiety', 'couvade syndrome', 'dad pregnancy stress', 'anxiety first time father'],
+    author: 'Ankur',
+    authorRole: 'Founder, Dadly',
+    datePublished: '2026-05-18',
+    dateModified: '2026-05-18',
+    readTime: '11 min',
+    category: 'Mental Health',
+    tags: ['paternal anxiety', 'pregnancy', 'mental health', 'couvade syndrome'],
+    wordCount: 2100,
+    faqs: [
+      {
+        question: 'Is it normal for dads to feel anxious during pregnancy?',
+        answer: 'Yes, and more common than most people realize. Studies suggest 25–50%+ of expectant fathers experience significant anxiety or physical Couvade symptoms during pregnancy. The cultural silence around it makes it feel more isolating than it actually is.'
+      },
+      {
+        question: 'What is Couvade syndrome and is it real?',
+        answer: 'Couvade syndrome is when expectant fathers experience pregnancy-like symptoms: nausea, heartburn, fatigue, back pain, weight gain. It\'s real — research shows measurable hormonal changes in expectant fathers, including elevated prolactin and cortisol and reduced testosterone.'
+      },
+      {
+        question: 'Can dads get postnatal depression too?',
+        answer: 'Yes — about 1 in 10 new dads experience postpartum depression. Paternal anxiety during pregnancy is a risk factor. Naming it early is protective. See our full guide to paternal postpartum depression for more.'
+      },
+      {
+        question: 'How can I support my partner while managing my own anxiety during pregnancy?',
+        answer: 'The key is not suppressing your anxiety at the cost of carrying it alone. Name it, find an outlet — exercise, a trusted friend, or a tool like Dadly — and remember that being informed reduces helplessness. You support her better when you\'re not quietly drowning.'
+      },
+      {
+        question: 'When should a dad seek professional help during or after pregnancy?',
+        answer: 'If anxiety is preventing sleep consistently, if you\'re experiencing panic attacks, if you\'re using alcohol or avoidance behaviors to cope, or if it\'s persisting into the postpartum period — speak to your GP. Anxiety in new parents is well-understood and treatable.'
+      }
+    ]
+  },
+  'best-apps-for-expecting-dads-2026': {
+    slug: 'best-apps-for-expecting-dads-2026',
+    title: 'Best Apps for Expecting Dads in 2026: An Honest Comparison',
+    subtitle: 'I built one of these apps. Here\'s the unbiased view anyway — including where other apps genuinely do things well.',
+    description: 'An honest comparison of the best pregnancy and parenting apps for dads in 2026: Daddy Up, The Big Daddy, ProDaddy, HiDaddy, BabyCenter, and Dadly.',
+    keywords: ['best apps for expecting dads', 'pregnancy apps for dads', 'daddy up app', 'dadly app review', 'best dad pregnancy app 2026'],
+    author: 'Ankur',
+    authorRole: 'Founder, Dadly',
+    datePublished: '2026-05-18',
+    dateModified: '2026-05-18',
+    readTime: '10 min',
+    category: 'Resources',
+    tags: ['apps', 'expecting dad', 'pregnancy', 'comparison'],
+    wordCount: 2000,
+    faqs: [
+      {
+        question: 'Are there any free pregnancy apps for dads?',
+        answer: 'Yes — Daddy Up, BabyCenter, and HiDaddy all have free versions. Dadly offers a 7-day free trial. Most apps use a freemium model where the basics are free and premium features require a subscription.'
+      },
+      {
+        question: 'Which pregnancy app is best for first-time dads?',
+        answer: 'Depends on what you need. For passive week-by-week content, Daddy Up or BabyCenter. For scan report explanations and 2am AI answers, Dadly. For a couples experience, HiDaddy.'
+      },
+      {
+        question: 'Can I use a dad app alongside my partner\'s pregnancy app?',
+        answer: 'Yes — most dad-specific apps work independently. Dadly doesn\'t require your partner to have a separate app.'
+      },
+      {
+        question: 'Do pregnancy apps for dads have medically accurate information?',
+        answer: 'The better ones do. Dadly\'s content is informed by clinical sources. The Big Daddy was created by a doctor. Always treat app information as informational support, not medical advice.'
+      },
+      {
+        question: 'What\'s the best app for understanding scan results and lab reports?',
+        answer: 'Dadly — it\'s the only app that lets you describe a scan finding and get a plain-English explanation with context for your specific week and situation.'
+      }
+    ]
+  },
+  '3-month-old-baby-what-every-new-dad-should-know': {
+    slug: '3-month-old-baby-what-every-new-dad-should-know',
+    title: '3-Month-Old Baby: What Every New Dad Should Know',
+    subtitle: 'The fog is lifting. The baby is looking at you now — actually at you. Here\'s what\'s happening, what to do, and what to watch for.',
+    description: 'Everything dads need to know about a 3-month-old baby: development milestones, sleep patterns, feeding, bonding, and red flags to watch for.',
+    keywords: ['3 month old baby dad', '3 month old development', 'three month old milestones', 'new dad 3 months', 'baby 3 months sleep feeding'],
+    author: 'Ankur',
+    authorRole: 'Founder, Dadly',
+    datePublished: '2026-05-18',
+    dateModified: '2026-05-18',
+    readTime: '10 min',
+    category: 'Newborn',
+    tags: ['newborn', '3 months', 'baby development', 'milestones'],
+    wordCount: 2050,
+    faqs: [
+      {
+        question: 'Do 3-month-olds sleep through the night?',
+        answer: 'Some do — but many don\'t, and that\'s normal. A 3-month-old sleeping a longer stretch of 5–6 hours is a good sign. Sleeping through entirely (8+ hours) is less common at this age.'
+      },
+      {
+        question: 'How much tummy time does a 3-month-old need?',
+        answer: 'Build up to 30 minutes total per day, spread across 2–3 supervised sessions. If baby hates it, try placing them on your chest face-down — this counts and is usually much more tolerated.'
+      },
+      {
+        question: 'What developmental milestones should a 3-month-old have?',
+        answer: 'By 3 months: smiling socially, tracking moving objects with eyes, lifting head and chest during tummy time, and vocalising — coos and gurgles. If your baby isn\'t showing these, mention it at the next checkup.'
+      },
+      {
+        question: 'Can I start a sleep routine at 3 months?',
+        answer: 'A loose routine — not a rigid schedule — can start now. Consistency of cues helps even if the timing varies. Full sleep training methods are generally recommended from 4–6 months at the earliest.'
+      },
+      {
+        question: 'Is it normal for a dad to still feel disconnected from the baby at 3 months?',
+        answer: 'For some dads, yes — bonding is gradual and 3 months is still early. But if you\'re feeling disconnected from everything, not just the baby — numb, withdrawn, unable to enjoy anything — that\'s worth talking to your doctor about. It may be paternal postpartum depression, which is treatable.'
+      }
+    ]
+  },
 }
 
 export function getAllBlogSlugs(): string[] {

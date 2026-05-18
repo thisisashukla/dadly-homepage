@@ -17,6 +17,16 @@ const blogModules: Record<string, () => Promise<any>> = {
   'new-dad-sleep-deprivation-survival-guide': () => import('@/content/blogs/new-dad-sleep-deprivation-survival-guide'),
   'what-to-expect-in-delivery-room-first-time-dad': () => import('@/content/blogs/what-to-expect-in-delivery-room-first-time-dad'),
   'real-cost-of-having-a-baby-first-time-dads': () => import('@/content/blogs/real-cost-of-having-a-baby-first-time-dads'),
+  '20-week-anatomy-scan-dad-guide': () => import('@/content/blogs/20-week-anatomy-scan-dad-guide'),
+  'baby-poop-color-chart-new-dad': () => import('@/content/blogs/baby-poop-color-chart-new-dad'),
+  'pelvic-girdle-pain-pregnancy-what-dads-need-to-know': () => import('@/content/blogs/pelvic-girdle-pain-pregnancy-what-dads-need-to-know'),
+  'why-is-my-newborn-grunting': () => import('@/content/blogs/why-is-my-newborn-grunting'),
+  'hospital-bag-checklist-for-dad': () => import('@/content/blogs/hospital-bag-checklist-for-dad'),
+  'week-28-pregnancy-dads-guide': () => import('@/content/blogs/week-28-pregnancy-dads-guide'),
+  'group-b-strep-positive-what-dads-need-to-know': () => import('@/content/blogs/group-b-strep-positive-what-dads-need-to-know'),
+  'paternal-anxiety-during-pregnancy-why-dads-worry': () => import('@/content/blogs/paternal-anxiety-during-pregnancy-why-dads-worry'),
+  'best-apps-for-expecting-dads-2026': () => import('@/content/blogs/best-apps-for-expecting-dads-2026'),
+  '3-month-old-baby-what-every-new-dad-should-know': () => import('@/content/blogs/3-month-old-baby-what-every-new-dad-should-know'),
 }
 
 export async function generateStaticParams() {
