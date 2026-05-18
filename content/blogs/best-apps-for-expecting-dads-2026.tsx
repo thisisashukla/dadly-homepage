@@ -14,7 +14,7 @@ export const meta: BlogMeta = {
   datePublished: '2026-05-18',
   dateModified: '2026-05-18',
   readTime: '10 min',
-  category: 'Resources',
+  category: 'Pregnancy',
   tags: ['apps', 'expecting dad', 'pregnancy', 'resources', 'comparison'],
   wordCount: 2000,
   faqs: [

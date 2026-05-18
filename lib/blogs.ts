@@ -545,7 +545,7 @@ export const blogRegistry: Record<string, BlogMeta> = {
     datePublished: '2026-05-18',
     dateModified: '2026-05-18',
     readTime: '10 min',
-    category: 'Resources',
+    category: 'Pregnancy',
     tags: ['apps', 'expecting dad', 'pregnancy', 'comparison'],
     wordCount: 2000,
     faqs: [
